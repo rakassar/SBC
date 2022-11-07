@@ -1,0 +1,8 @@
+20:13:57.489 [main] INFO  Rough.Log4j - Initializing ExampleLog4j application
+20:13:57.490 [main] ERROR Rough.Log4j - Did it again!
+20:13:57.490 [main] TRACE Rough.Log4j - Exiting application.
+20:13:57.490 [main] DEBUG Rough.Log4j - Sample debug message
+20:13:57.490 [main] INFO  Rough.Log4j - Sample info message
+20:13:57.491 [main] WARN  Rough.Log4j - Sample warn message
+20:13:57.491 [main] ERROR Rough.Log4j - Sample error message
+20:13:57.491 [main] FATAL Rough.Log4j - Sample fatal message

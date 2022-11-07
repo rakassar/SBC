@@ -1,0 +1,359 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Aug 09 20:29:26 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>388 seconds (388349 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestScenarios.TC_003_NTBDocsCollectionEmployed.CreateNewLeadCollEmp5()'><b>CreateNewLeadCollEmp5</b><br>Test class: TestScenarios.TC_003_NTBDocsCollectionEmployed</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;i[class=&apos;icon icon icon-screenflow&apos;]&quot;}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;RIZWANA_DSG&apos;, ip: &apos;192.168.1.184&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b63f57d6344007ac25c37a620e9ed903, findElement {using=css selector, value=i[class=&apos;icon icon icon-screenflow&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\RIZWAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59430}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59430/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b63f57d6344007ac25c37a620e9ed903
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
+	at crm.mhc.pages.methods.CollectDocsLeadPageMethod.clickCRRSCButton(CollectDocsLeadPageMethod.java:418)
+	at TestScenarios.TC_003_NTBDocsCollectionEmployed.CreateNewLeadCollEmp5(TC_003_NTBDocsCollectionEmployed.java:161)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at UI.script1$7.actionPerformed(script1.java:334)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace870544514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace870544514'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;i[class=&apos;icon icon icon-screenflow&apos;]&quot;}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;RIZWANA_DSG&apos;, ip: &apos;192.168.1.184&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b63f57d6344007ac25c37a620e9ed903, findElement {using=css selector, value=i[class=&apos;icon icon icon-screenflow&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\RIZWAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59430}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59430/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b63f57d6344007ac25c37a620e9ed903
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
+	at crm.mhc.pages.methods.CollectDocsLeadPageMethod.clickCRRSCButton(CollectDocsLeadPageMethod.java:418)
+	at TestScenarios.TC_003_NTBDocsCollectionEmployed.CreateNewLeadCollEmp5(TC_003_NTBDocsCollectionEmployed.java:161)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at UI.script1$7.actionPerformed(script1.java:334)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+</pre></div></td>
+<td>30</td>
+<td>TestScenarios.TC_003_NTBDocsCollectionEmployed@704a31f0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestScenarios.TC_004_LeadDocsCollectedUnEmployed.LeadDocsCollectedUnEmployed1()'><b>LeadDocsCollectedUnEmployed1</b><br>Test class: TestScenarios.TC_004_LeadDocsCollectedUnEmployed</td>
+<td></td>
+<td>39</td>
+<td>TestScenarios.TC_004_LeadDocsCollectedUnEmployed@25bfe4a4</td></tr>
+<tr>
+<td title='TestScenarios.TC_005_LeadDocsCollectedSelfEmployed.CreateNewLeadCollSelfEmp3()'><b>CreateNewLeadCollSelfEmp3</b><br>Test class: TestScenarios.TC_005_LeadDocsCollectedSelfEmployed</td>
+<td></td>
+<td>16</td>
+<td>TestScenarios.TC_005_LeadDocsCollectedSelfEmployed@3545c88f</td></tr>
+<tr>
+<td title='TestScenarios.TC_004_LeadDocsCollectedUnEmployed.LeadDocsCollectedUnEmployed2()'><b>LeadDocsCollectedUnEmployed2</b><br>Test class: TestScenarios.TC_004_LeadDocsCollectedUnEmployed</td>
+<td></td>
+<td>9</td>
+<td>TestScenarios.TC_004_LeadDocsCollectedUnEmployed@25bfe4a4</td></tr>
+<tr>
+<td title='TestScenarios.TC_004_LeadDocsCollectedUnEmployed.LeadDocsCollectedUnEmployed3()'><b>LeadDocsCollectedUnEmployed3</b><br>Test class: TestScenarios.TC_004_LeadDocsCollectedUnEmployed</td>
+<td></td>
+<td>2</td>
+<td>TestScenarios.TC_004_LeadDocsCollectedUnEmployed@25bfe4a4</td></tr>
+<tr>
+<td title='TestScenarios.TC_005_LeadDocsCollectedSelfEmployed.CreateNewLeadCollSelfEmp4()'><b>CreateNewLeadCollSelfEmp4</b><br>Test class: TestScenarios.TC_005_LeadDocsCollectedSelfEmployed</td>
+<td></td>
+<td>18</td>
+<td>TestScenarios.TC_005_LeadDocsCollectedSelfEmployed@3545c88f</td></tr>
+<tr>
+<td title='TestScenarios.TC_005_LeadDocsCollectedSelfEmployed.CreateNewLeadCollSelfEmp1()'><b>CreateNewLeadCollSelfEmp1</b><br>Test class: TestScenarios.TC_005_LeadDocsCollectedSelfEmployed</td>
+<td></td>
+<td>41</td>
+<td>TestScenarios.TC_005_LeadDocsCollectedSelfEmployed@3545c88f</td></tr>
+<tr>
+<td title='TestScenarios.TC_004_LeadDocsCollectedUnEmployed.LeadDocsCollectedUnEmployed4()'><b>LeadDocsCollectedUnEmployed4</b><br>Test class: TestScenarios.TC_004_LeadDocsCollectedUnEmployed</td>
+<td></td>
+<td>12</td>
+<td>TestScenarios.TC_004_LeadDocsCollectedUnEmployed@25bfe4a4</td></tr>
+<tr>
+<td title='TestScenarios.TC_003_NTBDocsCollectionEmployed.CreateNewLeadCollEmp()'><b>CreateNewLeadCollEmp</b><br>Test class: TestScenarios.TC_003_NTBDocsCollectionEmployed<br/>
+<a href="#Output-186996469" onClick='toggleBox("Output-186996469", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-186996469" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-186996469">
+Enter UserName<br/>
+Enter Password<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>TestScenarios.TC_003_NTBDocsCollectionEmployed@704a31f0</td></tr>
+<tr>
+<td title='TestScenarios.TC_004_LeadDocsCollectedUnEmployed.LeadDocsCollectedUnEmployed()'><b>LeadDocsCollectedUnEmployed</b><br>Test class: TestScenarios.TC_004_LeadDocsCollectedUnEmployed<br/>
+<a href="#Output-113673077" onClick='toggleBox("Output-113673077", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-113673077" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-113673077">
+Enter UserName<br/>
+Enter Password<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>TestScenarios.TC_004_LeadDocsCollectedUnEmployed@25bfe4a4</td></tr>
+<tr>
+<td title='TestScenarios.TC_003_NTBDocsCollectionEmployed.CreateNewLeadCollEmp3()'><b>CreateNewLeadCollEmp3</b><br>Test class: TestScenarios.TC_003_NTBDocsCollectionEmployed</td>
+<td></td>
+<td>16</td>
+<td>TestScenarios.TC_003_NTBDocsCollectionEmployed@704a31f0</td></tr>
+<tr>
+<td title='TestScenarios.TC_003_NTBDocsCollectionEmployed.CreateNewLeadCollEmp4()'><b>CreateNewLeadCollEmp4</b><br>Test class: TestScenarios.TC_003_NTBDocsCollectionEmployed</td>
+<td></td>
+<td>34</td>
+<td>TestScenarios.TC_003_NTBDocsCollectionEmployed@704a31f0</td></tr>
+<tr>
+<td title='TestScenarios.TC_001_NTBLeadCreation.CreateNewLead1()'><b>CreateNewLead1</b><br>Test class: TestScenarios.TC_001_NTBLeadCreation</td>
+<td></td>
+<td>38</td>
+<td>TestScenarios.TC_001_NTBLeadCreation@60982498</td></tr>
+<tr>
+<td title='TestScenarios.TC_003_NTBDocsCollectionEmployed.CreateNewLeadCollEmp1()'><b>CreateNewLeadCollEmp1</b><br>Test class: TestScenarios.TC_003_NTBDocsCollectionEmployed</td>
+<td></td>
+<td>36</td>
+<td>TestScenarios.TC_003_NTBDocsCollectionEmployed@704a31f0</td></tr>
+<tr>
+<td title='TestScenarios.TC_005_LeadDocsCollectedSelfEmployed.CreateNewLeadCollSelfEmp()'><b>CreateNewLeadCollSelfEmp</b><br>Test class: TestScenarios.TC_005_LeadDocsCollectedSelfEmployed<br/>
+<a href="#Output-1480556840" onClick='toggleBox("Output-1480556840", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1480556840" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1480556840">
+Enter UserName<br/>
+Enter Password<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>TestScenarios.TC_005_LeadDocsCollectedSelfEmployed@3545c88f</td></tr>
+<tr>
+<td title='TestScenarios.TC_003_NTBDocsCollectionEmployed.CreateNewLeadCollEmp2()'><b>CreateNewLeadCollEmp2</b><br>Test class: TestScenarios.TC_003_NTBDocsCollectionEmployed</td>
+<td></td>
+<td>7</td>
+<td>TestScenarios.TC_003_NTBDocsCollectionEmployed@704a31f0</td></tr>
+<tr>
+<td title='TestScenarios.TC_001_NTBLeadCreation.CreateNewLead()'><b>CreateNewLead</b><br>Test class: TestScenarios.TC_001_NTBLeadCreation<br/>
+<a href="#Output-663057657" onClick='toggleBox("Output-663057657", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-663057657" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-663057657">
+Enter UserName<br/>
+Enter Password<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>TestScenarios.TC_001_NTBLeadCreation@60982498</td></tr>
+<tr>
+<td title='TestScenarios.TC_005_LeadDocsCollectedSelfEmployed.CreateNewLeadCollSelfEmp2()'><b>CreateNewLeadCollSelfEmp2</b><br>Test class: TestScenarios.TC_005_LeadDocsCollectedSelfEmployed</td>
+<td></td>
+<td>8</td>
+<td>TestScenarios.TC_005_LeadDocsCollectedSelfEmployed@3545c88f</td></tr>
+</table><p>
+</body>
+</html>
