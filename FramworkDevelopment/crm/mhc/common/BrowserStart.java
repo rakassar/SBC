@@ -3,6 +3,7 @@ package crm.mhc.common;
 import crm.mhc.pages.methods.CustomerSerachPageMethod;
 
 import crm.mhc.pages.objects.CRRSCLeadPageObject;
+import crm.mhc.pages.objects.CaseJourneyPageObject;
 import crm.mhc.pages.objects.CollectDocsLeadPageObject;
 import crm.mhc.pages.objects.CreateLeadAppointmentPageObject;
 import crm.mhc.pages.objects.CustomerCareExecutiveObjects;
@@ -54,7 +55,7 @@ public class BrowserStart implements Properties{
 	new ExecutiveAssistantSalesObjects_ea_sales(driver);
 	new CRRSCLeadPageObject(driver);
 	new FillAccountInformationPageObject(driver);
-	
+	new CaseJourneyPageObject(driver);
 	}
 	
 	
