@@ -49,5 +49,11 @@ public class HomePageObject extends LoginPageObject {
      @FindBy(id="BTN_EDIT")
      public static WebElement btn_ClickOnEditButton;
      
+     //case--
+     
+     
+     @FindBy(xpath="//*[@id=\"QuickLinksDiv\"]/ul/li[5]/a")
+  	 public static WebElement clk_leadpaneCasejourney ;
+       
      
     }

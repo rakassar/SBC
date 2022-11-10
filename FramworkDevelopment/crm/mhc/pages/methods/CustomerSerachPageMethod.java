@@ -4,8 +4,10 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import crm.mhc.pages.objects.CaseJourneyPageObject;
 import crm.mhc.pages.objects.CustomerSearchPageObject;
 
 
@@ -50,6 +52,7 @@ public void clickonredbutton()
  CustomerSearchPageObject.btn_redbutton.click();
  
 }
+
 public void clickstartjourney()
 
 {
@@ -74,6 +77,35 @@ public void ETBIndividualSalesJorney()
  }
 }
   
-
 }
+
+public void CustomerServiceJourney()
+
+{
+	String mainWindowHandle = driver.getWindowHandle();
+	System.out.println("Main Window"+mainWindowHandle);
+	Set<String> multiplewindows=driver.getWindowHandles();
+	Iterator<String> iterator = multiplewindows.iterator();
+  while (iterator.hasNext()) {
+             String ChildWindow = iterator.next();
+             if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
+             System.out.println("Child Window"+ ChildWindow);	 
+             driver.switchTo().window(ChildWindow);
+             CustomerSearchPageObject.clk_CustomerServiceJourney.click();
+             driver.switchTo().window(mainWindowHandle);
+ }
+}
+  
+}
+	
+public void ClickOnNextButtonOnCustomerSearch()
+	
+	{
+	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+
+	 CustomerSearchPageObject.clk_NextOnCustomerSerach1.click();
+	}
+
+
+
 }

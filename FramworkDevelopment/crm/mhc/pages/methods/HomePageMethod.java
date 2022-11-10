@@ -1,7 +1,9 @@
 package crm.mhc.pages.methods;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
+import crm.mhc.pages.objects.CaseJourneyPageObject;
 import crm.mhc.pages.objects.CustomerSearchPageObject;
 import crm.mhc.pages.objects.HomePageObject;
 
@@ -24,5 +26,15 @@ public class HomePageMethod extends LoginPageMethod{
 
 	   HomePageObject.clk_leadpanesalesjourney.click();	
   	}
+   
+   public void ClickOnCaseJouney()
+	
+  	{
+	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+
+	   HomePageObject.clk_leadpaneCasejourney.click();	
+  	}
+   
+ 
    
 }
