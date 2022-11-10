@@ -46,11 +46,19 @@ public static WebElement btn_clickstartjourney;
 @FindBy(css="a[id=\"1\"]")
 public static WebElement btn_ETBIndividualSalesJorney;
 
+@FindBy(css="a[id=\"2\"]")
+public static WebElement clk_CustomerServiceJourney;
+
 
 @FindBy(xpath="//*[@id=\\\"1\\\"]")
 public static WebElement btn_ETBJourney;
 
 
+
+@FindBy(xpath="//*[@id=\"object-action-button\"]/div/a[1]")
+public static WebElement clk_NextOnCustomerSerach1;
+
+//span[normalize-space()='Next']
 
 
 }
