@@ -17,8 +17,6 @@ public CaseJourneyPageObject (WebDriver driver)
 //***********End*************Fill the Info for  Indivdual process*****************************-------------//
 
 
-
-
 @FindBy(xpath="//*[@id=\"2\"]")
 public static WebElement clk_IndividualCaseJorney;
 }

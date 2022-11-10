@@ -30,21 +30,19 @@ public class CaseJourneyPageMethod extends HomePageMethod {
 	public void IndividualCaseJorney()
 
 	{
-		String mainWindowHandle = driver.getWindowHandle();
+		/*String mainWindowHandle = driver.getWindowHandle();
 		System.out.println("Main Window"+mainWindowHandle);
 		Set<String> multiplewindows=driver.getWindowHandles();
 		Iterator<String> iterator = multiplewindows.iterator();
-	  while (iterator.hasNext()) {
-	   String ChildWindow = iterator.next();
-	  if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
+	    while (iterator.hasNext()) {
+	    String ChildWindow = iterator.next();
+	    if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
 	    System.out.println("Child Window"+ ChildWindow);	 
-	             driver.switchTo().window(ChildWindow);
-	             CaseJourneyPageObject.clk_IndividualCaseJorney.click();
-	             driver.switchTo().window(mainWindowHandle);
+	    driver.switchTo().window(ChildWindow);*/
+	    CaseJourneyPageObject.clk_IndividualCaseJorney.click();
+	    //driver.switchTo().window(mainWindowHandle);
 	 }
 	
 
-}
-	  
+ 
 	}
-}
