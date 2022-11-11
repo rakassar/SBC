@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CaseStage1Page extends LoginPageObject{
+public class CaseStage1PageObject extends LoginPageObject{
 	
-public CaseStage1Page (WebDriver driver)
+public CaseStage1PageObject (WebDriver driver)
 
 {
 	super(driver);
@@ -19,13 +19,11 @@ public CaseStage1Page (WebDriver driver)
 
 
 
-
-
-@FindBy(xpath="//*[@data-autoid='cust_878_ctrl']")
+@FindBy(name="cust_878")
 public static WebElement fill_DetailsInConcern;
 
 
-@FindBy(xpath="//*[@data-autoid='cust_1896_ctrl']")
+@FindBy(name="cust_1896")
 public static WebElement ComputationRequest;
 
 @FindBy(xpath="//textarea[@placeholder='Please post your comments here']")

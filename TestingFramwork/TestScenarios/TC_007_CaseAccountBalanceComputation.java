@@ -71,13 +71,13 @@ import org.testng.annotations.Listeners;
         CJPM.FillSSC("Account Balance Computation");
 	    Thread.sleep(1000); 
 	    CJPM.NextOnCasePage();
-	    
-	   // home.scrollBy();
+	    home.scrollBy();
 	    Thread.sleep(5000);
+	    
 	    //Stage1 Case Journey
 	    cs1pm.fill_DetailsInConcern("Test Details of Concern Field");
 	    Thread.sleep(1000);
-	    cs1pm.SelectComputationRequest("Account Balance Computation");
+	    cs1pm.SelectComputationRequest("Available Balance Computation");
 	    Thread.sleep(1000);
 	    cs1pm.fill_Remarks("Successfull Case Creation");
 	    Thread.sleep(1000);

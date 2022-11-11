@@ -15,7 +15,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import crm.mhc.pages.objects.CaseJourneyPageObject;
-import crm.mhc.pages.objects.CaseStage1Page;
+
+import crm.mhc.pages.objects.CaseStage1PageObject;
 import crm.mhc.pages.objects.CollectDocsLeadPageObject;
 import crm.mhc.pages.objects.CustomerCareExecutiveObjects;
 import crm.mhc.pages.objects.CustomerSearchPageObject;
@@ -34,16 +35,13 @@ public class CaseStage1PageMethod extends HomePageMethod {
 
 	{
 		
-
-	       Thread.sleep(1000);
-	         js = (JavascriptExecutor) driver;
-	        js.executeScript("window.scrollBy(0,1500)","" );
-			/*
-			 * Thread.sleep(2000); CaseStage1Page.fill_DetailsInConcern.click();
-			 */
-	        Thread.sleep(5000);
-	        CaseStage1Page.fill_DetailsInConcern.sendKeys(data1);
-	        System.out.println("Entered text in Details of Concern field");
+		   Thread.sleep(1000);
+           js = (JavascriptExecutor) driver;
+           js.executeScript("window.scrollBy(0,1500)","" );
+		   Thread.sleep(5000);
+		   CaseStage1PageObject.fill_DetailsInConcern.click();
+           CaseStage1PageObject.fill_DetailsInConcern.sendKeys(data1);
+	       System.out.println("Entered text in Details of Concern field");
 	}
 	
 	
@@ -51,18 +49,18 @@ public class CaseStage1PageMethod extends HomePageMethod {
 	public void SelectComputationRequest(String ComputationRequest) throws InterruptedException
 	    {
 		
-		Thread.sleep(1000);
-		    CaseStage1Page.ComputationRequest.click();
-		    Thread.sleep(5000);
-	    	Select sel1 = new Select(CaseStage1Page.ComputationRequest);
+		    //Thread.sleep(1000);
+		    //CaseStage1PageObject.ComputationRequest.click();
+		    //Thread.sleep(5000);
+	    	Select sel1 = new Select(CaseStage1PageObject.ComputationRequest);
 	    	sel1.selectByValue(ComputationRequest);
 	
 	    }
 	
 	public void fill_Remarks(String Remarks)
     {
-		CaseStage1Page.fill_Remarks.click();
-		CaseStage1Page.fill_Remarks.sendKeys(Remarks);
+		CaseStage1PageObject.fill_Remarks.click();
+		CaseStage1PageObject.fill_Remarks.sendKeys(Remarks);
 
     }
 	
@@ -71,6 +69,6 @@ public class CaseStage1PageMethod extends HomePageMethod {
 		  CaseJourneyPageObject.clk_NextOnCasePage.click();
 	    
 	  }
-	
+	 
 
 }
