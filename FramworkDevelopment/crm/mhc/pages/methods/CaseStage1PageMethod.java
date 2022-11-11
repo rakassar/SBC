@@ -30,27 +30,32 @@ public class CaseStage1PageMethod extends HomePageMethod {
 
 //************************Fill the Info Stage1 process*****************************-------------//
 
-	public void fill_DetailsInConcern(String data) throws InterruptedException
+	public void fill_DetailsInConcern(String data1) throws InterruptedException
 
 	{
+		
 
-		Thread.sleep(1000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1500)","" );
-		Thread.sleep(2000);
-		CaseStage1Page.fill_DetailsInConcern.click();
-		Thread.sleep(1000);
-		CaseStage1Page.fill_DetailsInConcern.sendKeys(data);
-
+	       Thread.sleep(1000);
+	         js = (JavascriptExecutor) driver;
+	        js.executeScript("window.scrollBy(0,1500)","" );
+			/*
+			 * Thread.sleep(2000); CaseStage1Page.fill_DetailsInConcern.click();
+			 */
+	        Thread.sleep(5000);
+	        CaseStage1Page.fill_DetailsInConcern.sendKeys(data1);
+	        System.out.println("Entered text in Details of Concern field");
 	}
 	
 	
 	
-	public void SelectComputationRequest(String ComputationRequest)
+	public void SelectComputationRequest(String ComputationRequest) throws InterruptedException
 	    {
+		
+		Thread.sleep(1000);
 		    CaseStage1Page.ComputationRequest.click();
+		    Thread.sleep(5000);
 	    	Select sel1 = new Select(CaseStage1Page.ComputationRequest);
-	    	sel1.selectByVisibleText(ComputationRequest);
+	    	sel1.selectByValue(ComputationRequest);
 	
 	    }
 	

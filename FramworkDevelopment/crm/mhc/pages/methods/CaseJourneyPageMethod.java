@@ -7,6 +7,7 @@ import java.util.Random;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -27,6 +28,7 @@ public class CaseJourneyPageMethod extends HomePageMethod {
 
 	String SDmobilenumber;
 	public static String leadid;
+	JavascriptExecutor js;
 
 //************************Fill the Info for new lead process*****************************-------------//
 
@@ -41,19 +43,30 @@ public class CaseJourneyPageMethod extends HomePageMethod {
        public void FillSSC(String sscname) throws InterruptedException
 	
 		{
-		
+    	   String mainWindowHandle = driver.getWindowHandle();
 		  Set<String> listofWindows=driver.getWindowHandles();//Move to child window
 	      Iterator<String> ite = listofWindows.iterator();
-	      String S1 = ite.next();
-	      String S2 = ite.next();
-	      driver.switchTo().window(S2);
-	      driver.manage().window().maximize();
-	      CaseJourneyPageObject.fillSSC.click();
-		  WebElement SSCSearch = CaseJourneyPageObject.fillSSC;
-		  SSCSearch.sendKeys(sscname);
-		  Thread.sleep(1000);
-		  SSCSearch.sendKeys(Keys.DOWN);
-		  SSCSearch.sendKeys(Keys.ENTER);
+	      //String S1 = ite.next();
+	      //String S2 = ite.next();
+	      System.out.println("Handle Child Windows");
+	      while (ite.hasNext()) 
+	      {
+	          String ChildWindow = ite.next();
+	              if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) 
+	              {
+	              
+	              driver.switchTo().window(ChildWindow);
+	              driver.manage().window().maximize();
+//	              CaseJourneyPageObject.fillSSC.click();
+	    		  WebElement SSCSearch = CaseJourneyPageObject.fillSSC;
+	    		  SSCSearch.sendKeys(sscname);
+	    		  Thread.sleep(1000);
+	    		  SSCSearch.sendKeys(Keys.DOWN);
+	    		  SSCSearch.sendKeys(Keys.ENTER);
+	              }    
+	      }
+	      
+	      
 
 		
 		}
@@ -61,6 +74,10 @@ public class CaseJourneyPageMethod extends HomePageMethod {
 	  public void NextOnCasePage() 
 	  {
 		  CaseJourneyPageObject.clk_NextOnCasePage.click();
+			/*
+			 * Thread.sleep(2000); JavascriptExecutor js = (JavascriptExecutor) driver;
+			 * js.executeScript("window.scrollBy(0,1500)", "");
+			 */
 	    
 	    }
 	  

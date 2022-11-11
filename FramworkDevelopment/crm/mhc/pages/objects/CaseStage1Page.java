@@ -20,10 +20,12 @@ public CaseStage1Page (WebDriver driver)
 
 
 
-@FindBy(name="cust_878")
+
+@FindBy(xpath="//*[@data-autoid='cust_878_ctrl']")
 public static WebElement fill_DetailsInConcern;
 
-@FindBy(xpath="//select[@name='cust_1896']")
+
+@FindBy(xpath="//*[@data-autoid='cust_1896_ctrl']")
 public static WebElement ComputationRequest;
 
 @FindBy(xpath="//textarea[@placeholder='Please post your comments here']")
