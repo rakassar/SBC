@@ -12,7 +12,7 @@ import crm.mhc.pages.methods.CustomerSerachPageMethod;
 import crm.mhc.pages.methods.HomePageMethod;
 import crm.mhc.pages.methods.LeadObjectPageMethod;
 import crm.mhc.pages.methods.IndividualSalesJourneyPageMethod;
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;		
@@ -32,7 +32,7 @@ import org.testng.annotations.Listeners;
     Screenshot screen=new Screenshot();
     CaseJourneyPageMethod CJPM=new CaseJourneyPageMethod();
     CaseStage1PageMethod  cs1pm = new CaseStage1PageMethod();
-  
+    HomePageMethod home = new HomePageMethod();
 	//************************Fill the Info for SD process*****************************-------------//
 	//ListnersClassAnotation css=new ListnersClassAnotation(); 
     @Test(priority=1)
@@ -71,9 +71,11 @@ import org.testng.annotations.Listeners;
         CJPM.FillSSC("Account Balance Computation");
 	    Thread.sleep(1000); 
 	    CJPM.NextOnCasePage();
-	    Thread.sleep(20000);
+	    
+	   // home.scrollBy();
+	    Thread.sleep(5000);
 	    //Stage1 Case Journey
-	    cs1pm.fill_DetailsInConcern("No query");
+	    cs1pm.fill_DetailsInConcern("Test Details of Concern Field");
 	    Thread.sleep(1000);
 	    cs1pm.SelectComputationRequest("Account Balance Computation");
 	    Thread.sleep(1000);
