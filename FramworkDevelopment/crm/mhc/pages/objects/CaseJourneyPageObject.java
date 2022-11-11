@@ -33,5 +33,3 @@ public static WebElement clk_NextOnCasePage;
 public static WebElement clk_casesaveandproceed ;
 
 }
-
-
