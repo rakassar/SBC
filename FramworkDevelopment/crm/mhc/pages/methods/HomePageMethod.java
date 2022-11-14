@@ -1,5 +1,6 @@
 package crm.mhc.pages.methods;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
@@ -34,7 +35,62 @@ public class HomePageMethod extends LoginPageMethod{
 
 	   HomePageObject.clk_leadpaneCasejourney.click();	
   	}
+   public void scrolldown()
+
+
+
+   {
+    // scroll down by 500 pixels with Javascript Executor
+       JavascriptExecutor js = (JavascriptExecutor) driver;
+      // js.executeScript("window.scrollBy(0,500)");
+       // identify element
+       System.out.println("scrolling down:");
+       // scroll down up 500 pixels with Javascript Executor
+      // js.executeScript("window.scrollBy(0,500)");
+       
+       
+       //till page end
+       js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+       }
    
+   public void scrollup()
+
+
+
+   {
+    // scroll down by 500 pixels with Javascript Executor
+       JavascriptExecutor js = (JavascriptExecutor) driver;
+      // js.executeScript("window.scrollBy(0,500)");
+       // identify element
+       System.out.println("scrolling down:");
+       // scroll down up 500 pixels with Javascript Executor
+       //js.executeScript("window.scrollBy(0,500)");
+       
+      //till page end
+       js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+       }
+   
+  
+
+
+
+public void scrollBy()
+
+
+
+   {
+    // scroll down by 500 pixels with Javascript Executor
+       JavascriptExecutor js = (JavascriptExecutor) driver;
+      // js.executeScript("window.scrollBy(0,500)");
+       // identify element
+       System.out.println("scrolling by down:");
+       // scroll down up 500 pixels with Javascript Executor
+       js.executeScript("window.scrollBy(0,500)");
+       
+       
+       //till page end
+       //js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+       }
  
    
 }
