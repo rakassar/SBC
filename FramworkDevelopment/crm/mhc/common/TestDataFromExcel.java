@@ -14,6 +14,8 @@ public class TestDataFromExcel {
 	
 	public static String UserName;
 	public static String Password;
+	public static String UserName1;
+	public static String Password1;
 	public static String SalutationID;
 	public static String ProductCategory;
 	public static String Product;
@@ -93,7 +95,7 @@ public static void DataRead() throws IOException {
 
 //public static void main (String [] args) throws IOException{
 		
-FileInputStream fs = new FileInputStream("D:\\Rizwan\\Automation\\lib\\Datafromexcel.xlsx");
+FileInputStream fs = new FileInputStream("D:\\Deepak\\Automation\\Execl_File\\Datafromexcel.xlsx");
 //Creating a workbook
 XSSFWorkbook workbook = new XSSFWorkbook(fs);
 XSSFSheet sheet = workbook.getSheetAt(0);
@@ -102,6 +104,8 @@ XSSFSheet sheet2 = workbook.getSheetAt(2);
 
 UserName=sheet.getRow(0).getCell(1).getStringCellValue();
 Password=sheet.getRow(1).getCell(1).getStringCellValue();
+UserName1=sheet.getRow(0).getCell(2).getStringCellValue();
+Password1=sheet.getRow(1).getCell(2).getStringCellValue();
 SalutationID=sheet.getRow(2).getCell(1).getStringCellValue();
 ProductCategory=sheet.getRow(3).getCell(1).getStringCellValue();
 Product=sheet.getRow(4).getCell(1).getStringCellValue();
