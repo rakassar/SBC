@@ -68,7 +68,7 @@ public class TC_002_NTBLeadAppointment extends HomePageMethod
         Thread.sleep(1000);
         lopm.saveAndProceed();
         LogoutButtonClick();
-        QuiteBrowser();
+       // QuiteBrowser();
 
         
       
