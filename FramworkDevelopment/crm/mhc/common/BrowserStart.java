@@ -4,6 +4,8 @@ import crm.mhc.pages.methods.CustomerSerachPageMethod;
 
 import crm.mhc.pages.objects.CRRSCLeadPageObject;
 import crm.mhc.pages.objects.CaseJourneyPageObject;
+import crm.mhc.pages.objects.CaseStage1PageObject;
+import crm.mhc.pages.objects.CaseStage2PageObject;
 import crm.mhc.pages.objects.CollectDocsLeadPageObject;
 import crm.mhc.pages.objects.CreateLeadAppointmentPageObject;
 import crm.mhc.pages.objects.CustomerCareExecutiveObjects;
@@ -55,7 +57,9 @@ public class BrowserStart implements Properties{
 	new ExecutiveAssistantSalesObjects_ea_sales(driver);
 	new CRRSCLeadPageObject(driver);
 	new FillAccountInformationPageObject(driver);
-	new CaseJourneyPageObject(driver);
+	new CaseJourneyPageObject(driver); 
+	new CaseStage1PageObject(driver);
+	new CaseStage2PageObject(driver);
 	}
 	
 	
@@ -67,12 +71,11 @@ public class BrowserStart implements Properties{
 		driver.navigate().to(URL);
 	}
 	
-	@AfterClass
-	public void QuiteBrowser()
-	
-	{
-		driver.quit();
-	}
+	/*
+	 * @AfterClass public void QuiteBrowser()
+	 * 
+	 * { driver.quit(); }
+	 */
 	
 }
 
