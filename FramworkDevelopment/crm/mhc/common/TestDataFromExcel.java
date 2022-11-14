@@ -12,10 +12,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class TestDataFromExcel {
 	
-	public static String UserName;
-	public static String Password;
-	public static String UserName1;
-	public static String Password1;
+	public static String UserName_CA;
+	public static String Password_CA;
+	public static String UserName_CDC;
+	public static String Password_CDC;
+	
+	
 	public static String SalutationID;
 	public static String ProductCategory;
 	public static String Product;
@@ -95,17 +97,20 @@ public static void DataRead() throws IOException {
 
 //public static void main (String [] args) throws IOException{
 		
-FileInputStream fs = new FileInputStream("D:\\Deepak\\Automation\\Execl_File\\Datafromexcel.xlsx");
+FileInputStream fs = new FileInputStream("D:\\Rizwan\\Automation\\lib\\SBC\\SBC_Datafromexcel.xlsx");
 //Creating a workbook
 XSSFWorkbook workbook = new XSSFWorkbook(fs);
 XSSFSheet sheet = workbook.getSheetAt(0);
 XSSFSheet sheet1 = workbook.getSheetAt(1);
 XSSFSheet sheet2 = workbook.getSheetAt(2);
+XSSFSheet sheet3 = workbook.getSheetAt(3);
 
-UserName=sheet.getRow(0).getCell(1).getStringCellValue();
-Password=sheet.getRow(1).getCell(1).getStringCellValue();
-UserName1=sheet.getRow(0).getCell(2).getStringCellValue();
-Password1=sheet.getRow(1).getCell(2).getStringCellValue();
+
+UserName_CA=sheet3.getRow(0).getCell(1).getStringCellValue();
+Password_CA=sheet3.getRow(1).getCell(1).getStringCellValue();
+UserName_CDC=sheet3.getRow(2).getCell(1).getStringCellValue();
+Password_CDC=sheet3.getRow(3).getCell(1).getStringCellValue();
+
 SalutationID=sheet.getRow(2).getCell(1).getStringCellValue();
 ProductCategory=sheet.getRow(3).getCell(1).getStringCellValue();
 Product=sheet.getRow(4).getCell(1).getStringCellValue();
@@ -186,8 +191,8 @@ Cell cell2 = row2.getCell(1);
 System.out.println(sheet.getRow(1).getCell(0));
 Row row3 = sheet.getRow(1);
 Cell cell3 = row3.getCell(1);
-System.out.println(UserName);
-System.out.println(Password);
+System.out.println(UserName_CA);
+System.out.println(Password_CA);
 
 
 	
