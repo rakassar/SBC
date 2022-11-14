@@ -44,10 +44,10 @@ import org.testng.annotations.Listeners;
     	//launchBrowser();
     	TDFX.DataRead();
     	Thread.sleep(5000);
- 		EnterUserName(TestDataFromExcel.UserName);
+ 		EnterUserName(TestDataFromExcel.UserName_CA);
  		Thread.sleep(1000);
         screen.ScreenshotMethod("TC_007_CaseAccountBalanceComputation-");
-        EnterPassword(TestDataFromExcel.Password); 
+        EnterPassword(TestDataFromExcel.Password_CA); 
         LoginButtonClick();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_007_CaseAccountBalanceComputation-");
@@ -72,34 +72,37 @@ import org.testng.annotations.Listeners;
         Thread.sleep(2000);
         CJPM.FillSSC("Account Balance Computation");
 	    Thread.sleep(5000); 
-	   CJPM.creditcardproduct();
-	   Thread.sleep(5000); 
+	    CJPM.creditcardproduct();
+	    Thread.sleep(5000); 
 		
-		  CJPM.NextOnCasePage(); 
-		  home.scrollBy(); 
-		  Thread.sleep(5000);
+		CJPM.NextOnCasePage(); 
+		home.scrollBy(); 
+		Thread.sleep(5000);
 		  
-		  //Stage1 Case Journey
-		  cs1pm.fill_DetailsInConcern("Test Details of Concern Field");
-		  Thread.sleep(1000);
-		  cs1pm.SelectComputationRequest("Available Balance Computation");
-		  Thread.sleep(1000); 
-		  cs1pm.fill_Remarks("Successfull Case Creation");
-		  Thread.sleep(1000); 
-		  CJPM.casesaveAndProceed(); Thread.sleep(10000);
-		  LogoutButtonClick();
-		  TDFX.DataRead();
-	    	Thread.sleep(5000);
-	 		EnterUserName(TestDataFromExcel.UserName1);
-	 		Thread.sleep(1000);
-	        //screen.ScreenshotMethod("TC_007_CaseAccountBalanceComputation-");
-	        EnterPassword(TestDataFromExcel.Password1); 
-	        LoginButtonClick();
-	        cs2pm.clk_caseobject();
-	        Thread.sleep(3000);
-	        cs2pm.clk_selfassigncase("Remark By Processor");
-	        CJPM.casesaveAndProceed(); 
-	        Thread.sleep(1000);
+	   //Stage1 Case Journey
+		cs1pm.fill_DetailsInConcern("Test Details of Concern Field");
+		Thread.sleep(1000);
+		cs1pm.SelectComputationRequest("Available Balance Computation");
+		Thread.sleep(1000); 
+		cs1pm.fill_Remarks("Successfull Case Creation");
+		Thread.sleep(1000); 
+		CJPM.casesaveAndProceed();
+		Thread.sleep(1000);
+		LogoutButtonClick();
+		cs1pm.GetCaseId();
+		
+	  
+	    Thread.sleep(5000);
+	 	EnterUserName(TestDataFromExcel.UserName_CDC);
+	 	Thread.sleep(1000);
+	    screen.ScreenshotMethod("TC_007_CaseAccountBalanceComputation-");
+	    EnterPassword(TestDataFromExcel.Password_CDC); 
+	    LoginButtonClick();
+	    cs2pm.clk_caseobject();
+	    Thread.sleep(3000);
+	    cs2pm.clk_selfassigncase("Remark By Processor");
+	    CJPM.casesaveAndProceed();
+	    Thread.sleep(50000);
         
         
 	}

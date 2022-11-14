@@ -71,11 +71,11 @@ public class BrowserStart implements Properties{
 		driver.navigate().to(URL);
 	}
 	
-	/*
-	 * @AfterClass public void QuiteBrowser()
-	 * 
-	 * { driver.quit(); }
-	 */
+	
+	 @AfterClass public void QuiteBrowser()
+	 
+	{ driver.quit(); }
+	 
 	
 }
 

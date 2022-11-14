@@ -64,12 +64,11 @@ public class CaseStage1PageMethod extends HomePageMethod {
 		
     }
 	
-	 public void NextOnCasePage() 
+	 public void GetCaseId() 
 	  {
-		  CaseJourneyPageObject.clk_NextOnCasePage.click();
 		  WebElement caseID=CaseStage1PageObject.caseIDCreated;
-		    caseIDCreated=caseID.getText();  
-		    System.out.println("Account Balance Computation CaseID:"+caseIDCreated);
+		  caseIDCreated=caseID.getText();  
+		  System.out.println("Account Balance Computation CaseID:"+caseIDCreated);
 	  }
 	 
 	 

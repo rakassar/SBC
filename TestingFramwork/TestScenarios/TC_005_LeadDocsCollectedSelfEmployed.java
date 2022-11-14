@@ -36,8 +36,8 @@ public class TC_005_LeadDocsCollectedSelfEmployed extends HomePageMethod
     	//launchBrowser();
     	TDFX.DataRead();
     	Thread.sleep(5000);
- 		EnterUserName(TestDataFromExcel.UserName);
-        EnterPassword(TestDataFromExcel.Password); 
+ 		EnterUserName(TestDataFromExcel.UserName_CA);
+        EnterPassword(TestDataFromExcel.Password_CA); 
         LoginButtonClick();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed-");
