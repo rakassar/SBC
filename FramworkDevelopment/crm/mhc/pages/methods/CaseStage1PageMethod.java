@@ -28,7 +28,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class CaseStage1PageMethod extends HomePageMethod {
 
 	JavascriptExecutor js;
-
+	String caseIDCreated;
 //************************Fill the Info Stage1 process*****************************-------------//
 
 	public void fill_DetailsInConcern(String data1) throws InterruptedException
@@ -61,14 +61,17 @@ public class CaseStage1PageMethod extends HomePageMethod {
     {
 		CaseStage1PageObject.fill_Remarks.click();
 		CaseStage1PageObject.fill_Remarks.sendKeys(Remarks);
-
+		
     }
 	
 	 public void NextOnCasePage() 
 	  {
 		  CaseJourneyPageObject.clk_NextOnCasePage.click();
-	    
+		  WebElement caseID=CaseStage1PageObject.caseIDCreated;
+		    caseIDCreated=caseID.getText();  
+		    System.out.println("Account Balance Computation CaseID:"+caseIDCreated);
 	  }
+	 
 	 
 
 }

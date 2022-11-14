@@ -53,6 +53,7 @@ public class HomePageMethod extends LoginPageMethod{
        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
        }
    
+
    public void scrollup()
 
 

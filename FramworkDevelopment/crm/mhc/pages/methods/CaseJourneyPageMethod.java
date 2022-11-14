@@ -3,6 +3,7 @@ package crm.mhc.pages.methods;
 import java.text.DecimalFormat;
 import java.time.Duration;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -60,17 +61,42 @@ public class CaseJourneyPageMethod extends HomePageMethod {
 //	              CaseJourneyPageObject.fillSSC.click();
 	    		  WebElement SSCSearch = CaseJourneyPageObject.fillSSC;
 	    		  SSCSearch.sendKeys(sscname);
-	    		  Thread.sleep(1000);
+	    		  Thread.sleep(3000);
 	    		  SSCSearch.sendKeys(Keys.DOWN);
 	    		  SSCSearch.sendKeys(Keys.ENTER);
-	              }    
+	              }
+	              
+	              }
 	      }
 	      
-	      
-
-		
-		}
-	
+			
+			  public void creditcardproduct() {
+			  
+				  CaseJourneyPageObject.fillcardproduct.click();
+			  List<WebElement> creditcardproduct = CaseJourneyPageObject.fillcreditcardproduct; 
+			  for(int i=0;i<creditcardproduct.size();i++) 
+			  { 
+				 
+				  String  creditCardProductName=creditcardproduct.get(i).getText();
+			  if(creditCardProductName.equalsIgnoreCase("MasterCard CashBack Card")) {
+			  creditcardproduct.get(i).click();
+			  System.out.println("Credit Card Account Number is selected"); 
+			  break;
+			  
+			  } else { System.out.println("Credit Card Product not found"); } }
+			  
+			  }
+			 
+       
+				/*
+				 * public void creditcardproduct(String cardproduct) throws InterruptedException
+				 * {
+				 * 
+				 * WebElement creditcardproduct = CaseJourneyPageObject.fillcreditcardproduct;
+				 * creditcardproduct.sendKeys(cardproduct); Thread.sleep(1000);
+				 * creditcardproduct.sendKeys(Keys.DOWN);
+				 * creditcardproduct.sendKeys(Keys.ENTER); }
+				 */
 	  public void NextOnCasePage() 
 	  {
 		  CaseJourneyPageObject.clk_NextOnCasePage.click();
