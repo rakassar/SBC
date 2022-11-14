@@ -3,6 +3,7 @@ package crm.mhc.pages.methods;
 import java.text.DecimalFormat;
 import java.time.Duration;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -13,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 
 import crm.mhc.pages.objects.CaseJourneyPageObject;
 
@@ -29,7 +31,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class CaseStage2PageMethod extends HomePageMethod {
 
 	JavascriptExecutor js;
-
+	 String caseIDCreated;
 //************************Fill the Info Stage1 process*****************************-------------//
 
 	public void clk_caseobject() throws InterruptedException
@@ -51,14 +53,35 @@ public class CaseStage2PageMethod extends HomePageMethod {
 		
 		 JavascriptExecutor js =(JavascriptExecutor)driver;
 		    js.executeScript("window.scrollBy(0,1100)", " ");
-		    CaseStage2PageObject.clk_selectview.click(); 
+		  
+		    Select View = new Select(CaseStage2PageObject.clk_selectview);
+		    
+	        View.selectByVisibleText("Assigned to Department");
+		     
 		    Thread.sleep(1000);
-		    CaseStage2PageObject.clk_selectrecord.click(); 
-		    Thread.sleep(1000);
+		  
 		    CaseStage2PageObject.clk_arrorw.click(); 
 		    Thread.sleep(1000);
-		    CaseStage2PageObject.clk_selectcase.click(); 
-		    Thread.sleep(1000);
+		    
+			/*
+			 * String CaseActual=caseIDCreated.replaceFirst("^0+(?!$)", "");
+			 * List<WebElement> caseSelectiNmyBucket= CaseStage2PageObject.clk_caseID;
+			 * 
+			 * for(int i=0;i<caseSelectiNmyBucket.size();i++) { String
+			 * caseID2=caseSelectiNmyBucket.get(i).getText(); if(caseID2.equals(CaseActual))
+			 * {
+			 * 
+			 * Thread.sleep(3000);
+			 * //wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector
+			 * (".react-grid-Cell.react-grid-Cell--frozen.rdg-last--frozen"))));
+			 * CaseStage2PageObject.Slk_caseID.click();
+			 * System.out.println("Checkbox against cases is selected"); break; } }
+			 */
+		     
+				
+				 CaseStage2PageObject.clk_selectcase.click(); 
+				 Thread.sleep(1000);
+				 
 		    CaseStage2PageObject.clk_selfassigncase.click();
 		    Thread.sleep(1000);
 		    CaseStage2PageObject.clk_okbutton.click(); 
@@ -78,7 +101,7 @@ public class CaseStage2PageMethod extends HomePageMethod {
 		    Select Department = new Select(CaseStage2PageObject.clk_dropdownacceptvalue);
 		    Thread.sleep(2000);
 		    Department.selectByVisibleText("Accept");
-		    System.out.println("Seelct Department Decision");
+		    System.out.println("Selcted Department Decision");
 		    Thread.sleep(3000);
 		    
 		    Thread.sleep(2000);

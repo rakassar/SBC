@@ -45,6 +45,12 @@ public static WebElement clk_selectrecord ;
 @FindBy(xpath="//a[@class='filterGroup__button acid-btn acid-btn--outline-brand']")
 public static WebElement clk_arrorw ;
 
+@FindBy(xpath="//div[contains(@data-autoid,'CAS_EX1_147')]")
+public static List<WebElement> clk_caseID ;
+
+@FindBy(css=".react-grid-Cell.react-grid-Cell--frozen.rdg-last--frozen")
+public static WebElement Slk_caseID ;
+
 @FindBy(xpath="//label[@for='checkbox0']")
 public static WebElement clk_selectcase ;
 
