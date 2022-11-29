@@ -40,6 +40,19 @@ public static WebElement clk_NextOnCasePage;
 @FindBy(css="a[data-autoid='FlowNext']")
 public static WebElement clk_casesaveandproceed ;
 
+@FindBy(css="select[data-autoid='pagesize_listing']")
+public static WebElement clk_pagingdropdownlist ;
+
+
+@FindBy(css="a[data-autoid='abcFilter_M']")
+public static WebElement clk_sortingM ;
+
+@FindBy(css="div[title='Product']")
+public static WebElement clk_productssorting ;
+
+@FindBy(css="select[name='CASE_ORIGIN']")
+public static WebElement clk_casesource ;
+
 
 
 

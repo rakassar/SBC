@@ -15,13 +15,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
+import crm.mhc.pages.objects.CRRSCLeadPageObject;
 import crm.mhc.pages.objects.CaseJourneyPageObject;
+
 import crm.mhc.pages.objects.CollectDocsLeadPageObject;
 import crm.mhc.pages.objects.CustomerCareExecutiveObjects;
 import crm.mhc.pages.objects.CustomerSearchPageObject;
 import crm.mhc.pages.objects.HomePageObject;
 import crm.mhc.pages.objects.IndividualSalesJourneyPageObject;
 import crm.mhc.pages.objects.LeadObjectPageObject;
+import crm.mhc.pages.objects.LoginPageObject;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -44,59 +47,49 @@ public class CaseJourneyPageMethod extends HomePageMethod {
        public void FillSSC(String sscname) throws InterruptedException
 	
 		{
-    	   String mainWindowHandle = driver.getWindowHandle();
-		  Set<String> listofWindows=driver.getWindowHandles();//Move to child window
-	      Iterator<String> ite = listofWindows.iterator();
-	      //String S1 = ite.next();
-	      //String S2 = ite.next();
-	      System.out.println("Handle Child Windows");
-	      while (ite.hasNext()) 
-	      {
-	          String ChildWindow = ite.next();
-	              if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) 
-	              {
-	              
-	              driver.switchTo().window(ChildWindow);
-	              driver.manage().window().maximize();
-//	              CaseJourneyPageObject.fillSSC.click();
-	    		  WebElement SSCSearch = CaseJourneyPageObject.fillSSC;
-	    		  SSCSearch.sendKeys(sscname);
-	    		  Thread.sleep(3000);
-	    		  SSCSearch.sendKeys(Keys.DOWN);
-	    		  SSCSearch.sendKeys(Keys.ENTER);
-	              }
-	              
-	              }
+    	
+		  driver.manage().window().maximize();
+          CaseJourneyPageObject.fillSSC.click();
+          WebElement SSCSearch = CaseJourneyPageObject.fillSSC;
+          SSCSearch.sendKeys(sscname);
+          Thread.sleep(3000);
+          SSCSearch.sendKeys(Keys.DOWN);
+          SSCSearch.sendKeys(Keys.ENTER);
+    	    
 	      }
 	      
 			
-			  public void creditcardproduct() {
+			  public void creditcardproduct() throws InterruptedException 
 			  
-				  CaseJourneyPageObject.fillcardproduct.click();
+			  {
+			  
+				  
+			  CharSequence searchString = "Master";
+			  CaseJourneyPageObject.fillcardproduct.click();
+
+			  CaseJourneyPageObject.clk_productssorting.click();
+			  CaseJourneyPageObject.clk_sortingM.click();
+			  //Select sel=new Select(CaseJourneyPageObject.clk_pagingdropdownlist);
+			  //sel.selectByValue(Product);
+			  //sel.selectByVisibleText("100");
+			  Thread.sleep(1000);
 			  List<WebElement> creditcardproduct = CaseJourneyPageObject.fillcreditcardproduct; 
 			  for(int i=0;i<creditcardproduct.size();i++) 
 			  { 
 				 
-				  String  creditCardProductName=creditcardproduct.get(i).getText();
-			  if(creditCardProductName.equalsIgnoreCase("MasterCard CashBack Card")) {
-			  creditcardproduct.get(i).click();
+			  String  creditCardProductName=creditcardproduct.get(i).getText();
+			  if(creditCardProductName.contains(searchString))	  
+			  {
+              creditcardproduct.get(i).click();
 			  System.out.println("Credit Card Account Number is selected"); 
 			  break;
 			  
-			  } else { System.out.println("Credit Card Product not found"); } }
+			  } 
+			  else { System.out.println("Credit Card Product not found"); } }
 			  
 			  }
 			 
        
-				/*
-				 * public void creditcardproduct(String cardproduct) throws InterruptedException
-				 * {
-				 * 
-				 * WebElement creditcardproduct = CaseJourneyPageObject.fillcreditcardproduct;
-				 * creditcardproduct.sendKeys(cardproduct); Thread.sleep(1000);
-				 * creditcardproduct.sendKeys(Keys.DOWN);
-				 * creditcardproduct.sendKeys(Keys.ENTER); }
-				 */
 	  public void NextOnCasePage() 
 	  {
 		  CaseJourneyPageObject.clk_NextOnCasePage.click();
@@ -115,5 +108,15 @@ public class CaseJourneyPageMethod extends HomePageMethod {
 
 		  CaseJourneyPageObject.clk_casesaveandproceed.click();
 	 	}
+	  
+	  public void Source( String Source )
+		
+	 	{
+	 	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+		  Select source = new Select(CaseJourneyPageObject.clk_casesource);
+		  source.selectByVisibleText(Source);
+		
+	 	}
+	   
 	   
 }

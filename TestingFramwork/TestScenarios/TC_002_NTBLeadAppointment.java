@@ -39,7 +39,7 @@ public class TC_002_NTBLeadAppointment extends HomePageMethod
     	TDFX.DataRead();
     	Thread.sleep(5000);
  		EnterUserName(TestDataFromExcel.UserName_CA);
-        EnterPassword(TestDataFromExcel.Password_CA); 
+        EnterPassword(TestDataFromExcel.Password); 
         LoginButtonClick();
         screen.ScreenshotMethod("TC_002_NTBLeadAppointment-");
         ClickOnsaleswidget();

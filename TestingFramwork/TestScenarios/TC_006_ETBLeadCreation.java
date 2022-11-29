@@ -35,7 +35,7 @@ import org.testng.annotations.Listeners;
     	TDFX.DataRead();
     	Thread.sleep(5000);
  		EnterUserName(TestDataFromExcel.UserName_CA);
-        EnterPassword(TestDataFromExcel.Password_CA); 
+        EnterPassword(TestDataFromExcel.Password); 
         LoginButtonClick();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_006_ETBLeadCreation-");

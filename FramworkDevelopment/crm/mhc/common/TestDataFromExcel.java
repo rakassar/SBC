@@ -13,9 +13,15 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class TestDataFromExcel {
 	
 	public static String UserName_CA;
-	public static String Password_CA;
-	public static String UserName_CDC;
-	public static String Password_CDC;
+	public static String Password;
+	public static String UserName_CCGInboundTeamLeader_Pro;
+	public static String UserName_CCGVendorCoordinator_Pro;
+	public static String UserName_CCGVendorCoordinator_Sup;
+	public static String UserName_CallCenterThirdPartyTeamLeader_Sup;
+	
+
+	
+	
 	
 	
 	public static String SalutationID;
@@ -107,9 +113,13 @@ XSSFSheet sheet3 = workbook.getSheetAt(3);
 
 
 UserName_CA=sheet3.getRow(0).getCell(1).getStringCellValue();
-Password_CA=sheet3.getRow(1).getCell(1).getStringCellValue();
-UserName_CDC=sheet3.getRow(2).getCell(1).getStringCellValue();
-Password_CDC=sheet3.getRow(3).getCell(1).getStringCellValue();
+Password=sheet3.getRow(1).getCell(1).getStringCellValue();
+UserName_CCGInboundTeamLeader_Pro=sheet3.getRow(2).getCell(1).getStringCellValue();
+UserName_CCGVendorCoordinator_Pro=sheet3.getRow(3).getCell(1).getStringCellValue();
+UserName_CCGVendorCoordinator_Sup=sheet3.getRow(4).getCell(1).getStringCellValue();
+UserName_CallCenterThirdPartyTeamLeader_Sup=sheet3.getRow(5).getCell(1).getStringCellValue();
+
+
 
 SalutationID=sheet.getRow(2).getCell(1).getStringCellValue();
 ProductCategory=sheet.getRow(3).getCell(1).getStringCellValue();
@@ -192,7 +202,7 @@ System.out.println(sheet.getRow(1).getCell(0));
 Row row3 = sheet.getRow(1);
 Cell cell3 = row3.getCell(1);
 System.out.println(UserName_CA);
-System.out.println(Password_CA);
+System.out.println(Password);
 
 
 	

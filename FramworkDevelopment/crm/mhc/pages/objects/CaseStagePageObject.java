@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CaseStage2PageObject extends LoginPageObject{
+public class CaseStagePageObject extends LoginPageObject{
 	
-public CaseStage2PageObject (WebDriver driver)
+public CaseStagePageObject (WebDriver driver)
 
 {
 	super(driver);
@@ -17,16 +17,38 @@ public CaseStage2PageObject (WebDriver driver)
 }
 
 
-//***********End*************Fill the Info for  Indivdual process*****************************-------------//
+//***********End*************Fill the Info Stage1 process case Journey*****************************-------------//
+
+
+
+@FindBy(name="cust_878")
+public static WebElement fill_DetailsInConcern;
+
+
+@FindBy(name="cust_1896")
+public static WebElement ComputationRequest;
+
+@FindBy(name="cust_471")
+public static WebElement fill_Remarks;
+
+
+
+@FindBy(xpath="//a[@data-autoid='FlowNext']") 
+public static WebElement clk_NextOnCasePage;
+
+@FindBy(xpath="//div[contains(@id,'newobject')]//div/span[contains(@data-autoid,'CASE_NUMBER_ctrl')]")
+public static WebElement caseIDCreated;
 
 
 
 
 @FindBy(className="icon-service")
-public static WebElement clk_caseobject;
+public static WebElement clk_Casequicklink;
 
-@FindBy(xpath="/html/body/div[2]/div[1]/div/ul/li[4]/div/div[2]/ul/li[1]/a/span")
-public static WebElement clk_caseobject2;
+//@FindBy(xpath="/html/body/div[2]/div[1]/div/ul/li[4]/div/div[2]/ul/li[1]/a/span")
+
+@FindBy(css="span[title='Cases']")
+public static WebElement clk_Caseobject;
 
 @FindBy(name="QueryCategoryId")
 public static WebElement clk_caseobject3;
@@ -36,7 +58,11 @@ public static WebElement clk_caseobject3;
  * public static WebElement clk_caseobject4;
  */
 
-@FindBy(xpath="//select[@name='QueryViewId']") 
+//@FindBy(name="QueryViewId") 
+
+@FindBy(css="select[name='QueryViewId']") 
+
+//@FindBy(xpath="//select[@name='QueryViewId']") 
 public static WebElement clk_selectview;
 
 @FindBy(xpath="//option[@value='55']")
@@ -61,9 +87,12 @@ public static WebElement clk_selfassigncase ;
 public static WebElement clk_okbutton ;
 
 @FindBy(xpath="//option[@value='56']")
-public static WebElement clk_selectmycaseview ;
+public static WebElement clk_selectmycaseview_56 ;
 
-@FindBy(css="#home-page > div.react-form.form > div > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div.tableWrapper.overflow-y-hidden.flex > div > div.customViewGrid.crm-table__body.overflow-auto.scroll.grid-without-actions > div:nth-child(1) > div > div.react-grid-Main > div > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(1) > div.react-grid-Row.react-grid-Row--even > div:nth-child(1) > div > div > span > a > span")
+@FindBy(xpath="//option[@value='220']")
+public static WebElement clk_selectmycaseview_220 ;
+
+@FindBy(css="[data-autoid='CaseID_0']")
  public static WebElement clk_selectthecase ;
 
 @FindBy(xpath="//i[@class='icon icon-edit']")
@@ -76,7 +105,6 @@ public static WebElement clk_dropdownacceptvalue ;
 public static WebElement clk_RemarksbyProcessor ;
 
 
-
-
-
 }
+
+

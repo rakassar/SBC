@@ -37,7 +37,7 @@ import org.testng.annotations.Listeners;
     	TDFX.DataRead();
     	Thread.sleep(5000);
  		EnterUserName(TestDataFromExcel.UserName_CA);
-        EnterPassword(TestDataFromExcel.Password_CA); 
+        EnterPassword(TestDataFromExcel.Password); 
         LoginButtonClick();
         ClickOnsaleswidget();
         ClickOnsalesJouney();
