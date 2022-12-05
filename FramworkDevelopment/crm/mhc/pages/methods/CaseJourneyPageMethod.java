@@ -12,12 +12,13 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import crm.mhc.pages.objects.CRRSCLeadPageObject;
 import crm.mhc.pages.objects.CaseJourneyPageObject;
-
+import crm.mhc.pages.objects.CaseStagePageObject;
 import crm.mhc.pages.objects.CollectDocsLeadPageObject;
 import crm.mhc.pages.objects.CustomerCareExecutiveObjects;
 import crm.mhc.pages.objects.CustomerSearchPageObject;
@@ -117,6 +118,21 @@ public class CaseJourneyPageMethod extends HomePageMethod {
 		  source.selectByVisibleText(Source);
 		
 	 	}
-	   
-	   
+	  
+
+		public void PIDStatus(String PIDStatus)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseJourneyPageObject.sel_PIDSTTAUS.sendKeys(PIDStatus);
+			
+	    }
+	
+		 public void ComplaintCategory(String ComplaintCategory) throws InterruptedException
+		    {
+		    	WebElement Complaint_Category = CaseJourneyPageObject.pic_ComplaintCategory;
+		    	Complaint_Category.sendKeys(ComplaintCategory);
+				Thread.sleep(1000);
+				Complaint_Category.sendKeys(Keys.DOWN);
+				Complaint_Category.sendKeys(Keys.ENTER);
+		    }
 }

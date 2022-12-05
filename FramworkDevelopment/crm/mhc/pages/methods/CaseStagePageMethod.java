@@ -172,7 +172,163 @@ public class CaseStagePageMethod extends HomePageMethod {
 			    
 		}
 		
+		public void sel_depetdecisonRR(String deptdecision) throws InterruptedException
+
+		{
+			    Select Department = new Select(CaseStagePageObject.clk_RRdropdownacceptvalue);
+			    Thread.sleep(2000);
+			    Department.selectByVisibleText(deptdecision);
+			    System.out.println("Selcted Department Decision");
+			    Thread.sleep(2000);
+			    
+		}
+		
+		
+		public void sel_depetdecisonreverse(String deptdecision) throws InterruptedException
+
+		{
+			    Select Department = new Select(CaseStagePageObject.clk_dropdownreversevalue);
+			    Thread.sleep(2000);
+			    Department.selectByVisibleText(deptdecision);
+			    System.out.println("Selcted Department Decision Reverse");
+			    Thread.sleep(2000);
+			    
+		}
+		
 	
+		
+		
 	 
+		
+		public void SpecialCondition(String SpecialCondition) throws InterruptedException
+
+		{
+			    Select Department = new Select(CaseStagePageObject.sel_SpecialCondition);
+			    Thread.sleep(2000);
+			    Department.selectByVisibleText(SpecialCondition);
+			    System.out.println("Selcted SpecialCondition");
+			    Thread.sleep(2000);
+			    
+		}
+		
+		
+		public void Specialaction(String action) throws InterruptedException
+
+		{
+			    Select Department = new Select(CaseStagePageObject.sel_action);
+			    Thread.sleep(2000);
+			    Department.selectByVisibleText(action);
+			    System.out.println("Selcted SpecialCondition");
+			    Thread.sleep(2000);
+			    
+		}
+		
+		
+
+		public void ReasonforTagging(String ReasonforTagging)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.ent_ReasonforTagging.sendKeys(ReasonforTagging);
+			
+	    }
+	
+		
+		
+		public void ReportedSystem(String ReportedSystem) throws InterruptedException
+	    {
+
+		    Select sel_ReportedSystem = new Select(CaseStagePageObject.sel_ReportedSystem);
+		    Thread.sleep(2000);
+		    sel_ReportedSystem.selectByVisibleText(ReportedSystem);
+		    System.out.println("Reported System");
+		    Thread.sleep(2000);
+	    }
+		
+		
+		public void EmployeeInvolved(String txt_EmployeeInvolved)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.txt_EmployeeInvolved.sendKeys(txt_EmployeeInvolved);
+			
+	    }
+		
+		
+		public void UnitGroup(String txt_UnitGroup)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.txt_UnitGroup.sendKeys(txt_UnitGroup);
+			
+	    }
+		
+		public void Employeeoutsource(String txt_Employeeoutsource)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.txt_Employeeoutsource.sendKeys(txt_Employeeoutsource);
+			
+	    }
+		
+		public void Position(String txt_Position)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.txt_Position.sendKeys(txt_Position);
+			
+	    }
+		
+		public void ActionTaken(String txt_ActionTaken)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.txt_ActionTaken.sendKeys(txt_ActionTaken);
+			
+	    }
+		
+		public void OtherAction(String txt_OtherAction)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.txt_OtherAction.sendKeys(txt_OtherAction);
+			
+	    }
+		
+	
+		
+		public void SourceAccountNumber(String txt_SourceAccountNumber)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.txt_SourceAccountNumber.sendKeys(txt_SourceAccountNumber);
+			
+	    }
+		
+		
+		public void DestinatuionAccountNumber(String txt_DestinatuionAccountNumber)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.txt_DestinatuionAccountNumber.sendKeys(txt_DestinatuionAccountNumber);
+			
+	    }
+		
+		public void TaxExemptionStatus(String Sel_TaxExemptionStatus)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.Sel_TaxExemptionStatus.sendKeys(Sel_TaxExemptionStatus);
+			
+	    }
+		
+		
+		public void ValidityTagging(String ValidityTagging) throws InterruptedException
+	    {
+			Select SelValidityTagging = new Select(CaseStagePageObject.Sel_ValidityTagging);
+		    Thread.sleep(2000);
+		    SelValidityTagging.selectByVisibleText(ValidityTagging);
+		    System.out.println("Validity");
+		    Thread.sleep(2000);
+	    }
+		
+		
+		public void UpdateCRRSC(String UpdateCRRSC)
+	    {
+			//CaseStagePageObject.fill_Remarks.click();
+			CaseStagePageObject.Sel_UpdateCRRSC.sendKeys(UpdateCRRSC);
+			
+	    }
+
 
 }

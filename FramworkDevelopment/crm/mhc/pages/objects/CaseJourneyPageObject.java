@@ -34,6 +34,13 @@ public static WebElement fillcardproduct;
 @FindBy(xpath="//div[contains(@data-autoid,'Name')]")
 public static List<WebElement> fillcreditcardproduct;
 
+@FindBy(name="cust_114")
+public static WebElement sel_PIDSTTAUS ;
+
+@FindBy(css="input[name='CASE_RESOLUTIONCODE']")
+public static WebElement pic_ComplaintCategory;
+
+
 @FindBy(xpath="//a[@data-autoid='FlowNext']") 
 public static WebElement clk_NextOnCasePage;
 

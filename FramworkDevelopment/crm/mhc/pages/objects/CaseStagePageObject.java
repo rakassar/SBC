@@ -31,6 +31,15 @@ public static WebElement ComputationRequest;
 @FindBy(name="cust_471")
 public static WebElement fill_Remarks;
 
+@FindBy(name="cust_996")
+public static WebElement sel_SpecialCondition;
+
+
+@FindBy(name="cust_870")
+public static WebElement ent_ReasonforTagging;
+
+@FindBy(name="cust_1649")
+public static WebElement sel_action;
 
 
 @FindBy(xpath="//a[@data-autoid='FlowNext']") 
@@ -89,6 +98,8 @@ public static WebElement clk_okbutton ;
 @FindBy(xpath="//option[@value='56']")
 public static WebElement clk_selectmycaseview_56 ;
 
+
+
 @FindBy(xpath="//option[@value='220']")
 public static WebElement clk_selectmycaseview_220 ;
 
@@ -101,8 +112,51 @@ public static WebElement clk_editthecase ;
 @FindBy(xpath="//select[@name='cust_512']")
 public static WebElement clk_dropdownacceptvalue ;
 
+@FindBy(xpath="//select[@name='cust_513']")
+public static WebElement clk_RRdropdownacceptvalue ;
+
+@FindBy(xpath="//select[@name='cust_513']")
+public static WebElement clk_dropdownreversevalue ;
+
+
 @FindBy(xpath="//textarea[@placeholder='Please post your comments here']")
 public static WebElement clk_RemarksbyProcessor ;
+
+
+
+
+@FindBy(name="cust_2794")
+public static WebElement sel_ReportedSystem;
+@FindBy(name="cust_2804")
+public static WebElement txt_EmployeeInvolved ;
+@FindBy(name="cust_2805")
+public static WebElement txt_UnitGroup ;
+@FindBy(name="cust_2806")
+public static WebElement txt_Employeeoutsource ;
+@FindBy(name="cust_2807")
+public static WebElement txt_Position ;
+@FindBy(name="cust_2808")
+public static WebElement txt_ActionTaken ;
+@FindBy(name="cust_2809")
+public static WebElement txt_OtherAction;
+
+
+@FindBy(name="cust_1576")
+public static WebElement txt_SourceAccountNumber;
+
+@FindBy(name="cust_1577")
+public static WebElement txt_DestinatuionAccountNumber;
+
+@FindBy(name="cust_2801")
+public static WebElement Sel_ValidityTagging;
+
+@FindBy(name="cust_2059")
+public static WebElement Sel_TaxExemptionStatus;
+
+@FindBy(name="cust_2713")
+public static WebElement Sel_UpdateCRRSC;
+
+
 
 
 }
