@@ -38,7 +38,7 @@ public class TC_002_NTBLeadAppointment extends HomePageMethod
     	launchBrowser();
     	TDFX.DataRead();
     	Thread.sleep(5000);
- 		EnterUserName(TestDataFromExcel.UserName);
+ 		EnterUserName(TestDataFromExcel.UserName_CA);
         EnterPassword(TestDataFromExcel.Password); 
         LoginButtonClick();
         screen.ScreenshotMethod("TC_002_NTBLeadAppointment-");
@@ -68,7 +68,7 @@ public class TC_002_NTBLeadAppointment extends HomePageMethod
         Thread.sleep(1000);
         lopm.saveAndProceed();
         LogoutButtonClick();
-        QuiteBrowser();
+       // QuiteBrowser();
 
         
       

@@ -35,7 +35,6 @@ public class HomePageMethod extends LoginPageMethod{
 
 	   HomePageObject.clk_leadpaneCasejourney.click();	
   	}
-   
    public void scrolldown()
 
 
@@ -54,6 +53,7 @@ public class HomePageMethod extends LoginPageMethod{
        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
        }
    
+
    public void scrollup()
 
 
@@ -86,11 +86,12 @@ public void scrollBy()
        // identify element
        System.out.println("scrolling by down:");
        // scroll down up 500 pixels with Javascript Executor
-       //js.executeScript("window.scrollBy(0,1000)");
-       js.executeScript("window.scrollBy(0,1500)","" );
+       js.executeScript("window.scrollBy(0,500)");
+       
        
        //till page end
        //js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
        }
+ 
    
 }

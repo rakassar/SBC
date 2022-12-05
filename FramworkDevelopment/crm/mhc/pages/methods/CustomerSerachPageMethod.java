@@ -67,7 +67,7 @@ public void ETBIndividualSalesJorney()
 	System.out.println("Main Window"+mainWindowHandle);
 	Set<String> multiplewindows=driver.getWindowHandles();
 	Iterator<String> iterator = multiplewindows.iterator();
-  while (iterator.hasNext()) {
+   while (iterator.hasNext()) {
              String ChildWindow = iterator.next();
              if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
              System.out.println("Child Window"+ ChildWindow);	 
@@ -81,21 +81,18 @@ public void ETBIndividualSalesJorney()
 
 public void CustomerServiceJourney()
 
-{
-	String mainWindowHandle = driver.getWindowHandle();
-	System.out.println("Main Window"+mainWindowHandle);
-	Set<String> multiplewindows=driver.getWindowHandles();
-	Iterator<String> iterator = multiplewindows.iterator();
-  while (iterator.hasNext()) {
-             String ChildWindow = iterator.next();
-             if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
-             System.out.println("Child Window"+ ChildWindow);	 
-             driver.switchTo().window(ChildWindow);
-             CustomerSearchPageObject.clk_CustomerServiceJourney.click();
-             driver.switchTo().window(mainWindowHandle);
- }
-}
-  
+{	
+	//String mainWindowHandle = driver.getWindowHandle();
+    //System.out.println("Main Window"+mainWindowHandle);
+    Set<String> multiplewindows=driver.getWindowHandles();
+    Iterator<String> iterator = multiplewindows.iterator();
+    String mainWindow = iterator.next();
+    System.out.println("Main Window"+mainWindow);
+    String ChildWindow = iterator.next();
+    System.out.println("Child Window"+ ChildWindow);
+    driver.switchTo().window(ChildWindow);
+    CustomerSearchPageObject.clk_CustomerServiceJourney.click();      
+
 }
 	
 public void ClickOnNextButtonOnCustomerSearch()

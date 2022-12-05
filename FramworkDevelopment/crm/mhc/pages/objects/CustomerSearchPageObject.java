@@ -32,7 +32,7 @@ public static WebElement ent_fillBBNnumber;
  * 
  */
 
-@FindBy(css="span[class='acd-link-text']")
+@FindBy(xpath="//a[@data-autoid='F266_0']")
 public static WebElement clk_topBBN;
 
 

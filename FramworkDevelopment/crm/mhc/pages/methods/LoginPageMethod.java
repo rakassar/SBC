@@ -1,7 +1,9 @@
 package crm.mhc.pages.methods;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
 import crm.mhc.common.BrowserStart;
+import crm.mhc.pages.objects.CRRSCLeadPageObject;
 import crm.mhc.pages.objects.LoginPageObject;
 
 
@@ -33,6 +35,16 @@ public abstract class LoginPageMethod extends BrowserStart
  {
 	 LoginPageObject.clk_ProfileImage_header.click();
 	 LoginPageObject.clk_logoutButton.click();
+	 
+ }
+ 
+ public void paging(String pagenumber)
+ {
+	
+	 LoginPageObject.clk_pagingdropdownlist.click();
+	 Select sel=new Select(CRRSCLeadPageObject.clk_pagingdropdownlist);
+ 	//sel.selectByValue(Product);
+ 	sel.selectByVisibleText(pagenumber);
 	 
  }
  

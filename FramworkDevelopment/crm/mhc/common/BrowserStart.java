@@ -4,8 +4,8 @@ import crm.mhc.pages.methods.CustomerSerachPageMethod;
 
 import crm.mhc.pages.objects.CRRSCLeadPageObject;
 import crm.mhc.pages.objects.CaseJourneyPageObject;
-import crm.mhc.pages.objects.CaseStage1PageObject;
-import crm.mhc.pages.objects.CaseStage2PageObject;
+import crm.mhc.pages.objects.CaseStagePageObject;
+
 import crm.mhc.pages.objects.CollectDocsLeadPageObject;
 import crm.mhc.pages.objects.CreateLeadAppointmentPageObject;
 import crm.mhc.pages.objects.CustomerCareExecutiveObjects;
@@ -34,7 +34,7 @@ import org.testng.annotations.BeforeTest;
 public class BrowserStart implements Properties{
 	public static WebDriver driver=null;
 	
-	@BeforeClass
+	//@BeforeClass
 	public void launchBrowser()
 	{
 		
@@ -58,8 +58,8 @@ public class BrowserStart implements Properties{
 	new CRRSCLeadPageObject(driver);
 	new FillAccountInformationPageObject(driver);
 	new CaseJourneyPageObject(driver); 
-	new CaseStage1PageObject(driver);
-	new CaseStage2PageObject(driver);
+	new CaseStagePageObject(driver);
+
 	}
 	
 	
@@ -71,11 +71,14 @@ public class BrowserStart implements Properties{
 		driver.navigate().to(URL);
 	}
 	
-	/*
-	 * @AfterClass public void QuiteBrowser()
-	 * 
-	 * { driver.quit(); }
-	 */
+	
+	// @AfterClass 
+	public void QuiteBrowser()
+	 
+	{
+		 
+		 driver.quit(); }
+	 
 	
 }
 

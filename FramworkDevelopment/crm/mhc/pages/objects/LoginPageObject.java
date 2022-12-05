@@ -27,6 +27,8 @@ public class LoginPageObject
  
  @FindBy(linkText="Logout")
  public static WebElement clk_logoutButton ;
+ @FindBy(css="select[data-autoid='pagesize_listing']")
+ public static WebElement clk_pagingdropdownlist ;
  
  }
 

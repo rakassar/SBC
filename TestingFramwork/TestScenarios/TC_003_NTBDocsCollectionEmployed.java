@@ -40,7 +40,7 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
     	//launchBrowser();
     	TDFX.DataRead();
     	Thread.sleep(5000);
- 		EnterUserName(TestDataFromExcel.UserName);
+ 		EnterUserName(TestDataFromExcel.UserName_CA);
         EnterPassword(TestDataFromExcel.Password); 
         LoginButtonClick();
         ClickOnsaleswidget();
