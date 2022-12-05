@@ -18,6 +18,16 @@ public class TestDataFromExcel {
 	public static String UserName_CCGVendorCoordinator_Pro;
 	public static String UserName_CCGVendorCoordinator_Sup;
 	public static String UserName_CallCenterThirdPartyTeamLeader_Sup;
+	public static String  UserName_BranchBCM;
+	
+	public static String   UserName_AreaHead;
+	public static String   UserName_BbogRegionHead;
+	public static String   UserName_BranchFinconHead;
+	public static String   UserName_BBGCDMaintenanceAnalyst;
+   
+	public static String   UserName_CCA;
+	public static String   UserName_SQCCU;
+
 	
 
 	
@@ -118,7 +128,15 @@ UserName_CCGInboundTeamLeader_Pro=sheet3.getRow(2).getCell(1).getStringCellValue
 UserName_CCGVendorCoordinator_Pro=sheet3.getRow(3).getCell(1).getStringCellValue();
 UserName_CCGVendorCoordinator_Sup=sheet3.getRow(4).getCell(1).getStringCellValue();
 UserName_CallCenterThirdPartyTeamLeader_Sup=sheet3.getRow(5).getCell(1).getStringCellValue();
+UserName_BranchBCM=sheet3.getRow(6).getCell(1).getStringCellValue();
 
+UserName_AreaHead=sheet3.getRow(7).getCell(1).getStringCellValue();
+UserName_BbogRegionHead=sheet3.getRow(8).getCell(1).getStringCellValue();
+UserName_BranchFinconHead=sheet3.getRow(9).getCell(1).getStringCellValue();
+UserName_BBGCDMaintenanceAnalyst=sheet3.getRow(10).getCell(1).getStringCellValue();
+
+ UserName_CCA=sheet3.getRow(11).getCell(1).getStringCellValue();
+ UserName_SQCCU=sheet3.getRow(12).getCell(1).getStringCellValue();
 
 
 SalutationID=sheet.getRow(2).getCell(1).getStringCellValue();
