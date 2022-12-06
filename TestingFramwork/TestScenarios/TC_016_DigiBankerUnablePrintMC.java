@@ -30,7 +30,9 @@ order by caseid desc
 //screen shot using listner class
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
 
-/*case creation by CCA for SSC=Application Beyond TAT
+
+/*case creation by CCA for SSC=DigiBanker - Unable To Print MC
+ * CCRSC=No
 Source=Branch Walkin
 
 */

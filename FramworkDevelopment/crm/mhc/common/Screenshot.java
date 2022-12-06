@@ -9,7 +9,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 
-public class Screenshot extends BrowserStart {
+import crm.mhc.repository.Properties;
+
+public class Screenshot extends BrowserStart implements Properties{
 	
 	  		
 	    public void ScreenshotMethod(String process) 					
@@ -26,7 +28,7 @@ public class Screenshot extends BrowserStart {
 	    try {
 	    	//FileUtils.copyFile(screenshotFile, new File("D:\\Rizwan\\Automation\\lib\\Pots\\"+Result.getName()+System.currentTimeMillis()+FileName+".png"));
 			
-	    	FileUtils.copyFile(screenshotFile, new File("D:\\Rizwan\\Automation\\lib\\Pots\\"+FileName+".png"));
+	    	FileUtils.copyFile(screenshotFile, new File(pots+FileName+".png"));
 		} 
 	    
 	    catch (IOException e) {
