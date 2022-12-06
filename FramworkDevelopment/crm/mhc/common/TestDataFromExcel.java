@@ -10,7 +10,9 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class TestDataFromExcel {
+import crm.mhc.repository.Properties;
+
+public class TestDataFromExcel implements Properties {
 	
 	public static String UserName_CA;
 	public static String Password;
@@ -113,7 +115,7 @@ public static void DataRead() throws IOException {
 
 //public static void main (String [] args) throws IOException{
 		
-FileInputStream fs = new FileInputStream("D:\\Rizwan\\Automation\\lib\\SBC\\SBC_Datafromexcel.xlsx");
+FileInputStream fs = new FileInputStream(ExcelInputPath);
 //Creating a workbook
 XSSFWorkbook workbook = new XSSFWorkbook(fs);
 XSSFSheet sheet = workbook.getSheetAt(0);
