@@ -22,9 +22,9 @@ import org.testng.annotations.Listeners;
 //screen shot using listner class
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
 
-/*case creation by CA for SSC=Account Balance Computation
+/*case creation by CA for SSC=Account Special Condition-Tagging/Untagging
 Source=Branch Walkin
-Computation request=Available Balance Computation
+
 */
 
 
