@@ -156,6 +156,21 @@ public static WebElement Sel_TaxExemptionStatus;
 @FindBy(name="cust_2713")
 public static WebElement Sel_UpdateCRRSC;
 
+@FindBy(name="cust_1673")
+public static WebElement sel_ContactInformationactipntype;
+
+
+@FindBy(name="cust_723")
+public static WebElement sel_CustomerType;
+@FindBy(name="cust_1817")
+public static WebElement pic_Country;
+@FindBy(name="cust_1674")
+public static WebElement ent_HouseNumber;
+@FindBy(name="cust_1675")
+public static WebElement ent_Street;
+@FindBy(name="cust_1687")
+public static WebElement ent_Mobile;
+
 
 
 
