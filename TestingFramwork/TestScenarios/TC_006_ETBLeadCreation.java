@@ -31,16 +31,23 @@ import org.testng.annotations.Listeners;
 	public void ETBCreateNewLead() throws Exception
 	{   
 	   
-    	//launchBrowser();
+    	launchBrowser();
+    	screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
     	TDFX.DataRead();
-    	Thread.sleep(5000);
+    	Thread.sleep(500);
+    	screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
  		EnterUserName(TestDataFromExcel.UserName_CA);
         EnterPassword(TestDataFromExcel.Password); 
+    	screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         LoginButtonClick();
-        Thread.sleep(1000);
+        CheckRole();
         screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         ClickOnsaleswidget();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         ClickOnsalesJouney();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         lopm.ClickOnOnBoardingJourney();
         cspm.BBNFillForCustomerSearch(TestDataFromExcel.BBN);
         Thread.sleep(1000);
@@ -48,6 +55,8 @@ import org.testng.annotations.Listeners;
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         cspm.ChooseBBNfromList();
+        Thread.sleep(2000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         cspm.clickstartjourney();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
@@ -55,6 +64,7 @@ import org.testng.annotations.Listeners;
         //cspm.clickonredbutton();
         //cspm.ClickOnOnBoardingJourneynext2();
         Thread.sleep(2000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         
 	}
         @Test
@@ -62,6 +72,7 @@ import org.testng.annotations.Listeners;
     	{    
         
         	NTBSJPM.LeadRating("Hot");
+        	screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             NTBSJPM.NTBJourneynext1();
             Thread.sleep(1000);
             NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
@@ -70,15 +81,31 @@ import org.testng.annotations.Listeners;
             screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             NTBSJPM.NTBJourneynext2();
             Thread.sleep(2000);
+            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            scrollBy();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            scrollBy();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            scrollBy();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            scrollBy();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            scrollBy();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            scrollBy();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
             //NTBSJPM.NTBignoreandCreate();
             CLDLPM.CheckEmployeetype();
-            Thread.sleep(1000);
-            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
-            Thread.sleep(2000);
+            Thread.sleep(500);
             CLDLPM.CreatedNewLeadEdit();
             Thread.sleep(1000);
             screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
-            Thread.sleep(2000);
 	   }
 	
         
@@ -87,10 +114,10 @@ import org.testng.annotations.Listeners;
     	{   
             CLDLPM.selectstatuscode(); 
             Thread.sleep(1000);
-            Thread.sleep(1000);
             screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             CLDLPM.SoleOwner(TestDataFromExcel.SoleOwner);
             Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
 			/*
 			 * CLDLPM.businessname(); CLDLPM.forEmployment(TestDataFromExcel.forEmployment);
 			 * Thread.sleep(2000);
@@ -100,6 +127,7 @@ import org.testng.annotations.Listeners;
          {
         	 
         	  CLDLPM.businessname();
+        	  CLDLPM.Sourceoffunds("Business");
         	  CLDLPM.forEmployment(TestDataFromExcel.forEmployment);
         	  Thread.sleep(1000);
               screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
@@ -110,16 +138,15 @@ import org.testng.annotations.Listeners;
          else if (CollectDocsLeadPageMethod.Employeetype.equals("Unemployed"))
         	 
          {
-        	 CLDLPM.selectstatuscode(); 
-             Thread.sleep(1000);
+        	 CLDLPM.Sourceoffunds("Inheritance");
              screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
-             CLDLPM.SoleOwner(TestDataFromExcel.SoleOwner);
              Thread.sleep(1000);
         	 System.out.println("EmployeeType is unemployed");
          }
          else if (CollectDocsLeadPageMethod.Employeetype.equals("Employed"))
          {
        		 CLDLPM.employername();
+       		CLDLPM.Sourceoffunds("Salary");
              Thread.sleep(1000);
              screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
              CLDLPM.workingsince(TestDataFromExcel.workingsincemonth, TestDataFromExcel.workingsinceyear);
@@ -127,8 +154,6 @@ import org.testng.annotations.Listeners;
              CLDLPM.forEmployment(TestDataFromExcel.forEmployment);
              Thread.sleep(1000);
              screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
-             CLDLPM.NatureOfWork(TestDataFromExcel.NatureOfWork);
-             Thread.sleep(1000);
         	 System.out.println("EmployeeType is Employed");
          }
            
@@ -139,9 +164,8 @@ import org.testng.annotations.Listeners;
     	
     	{   
         	CLDLPM.IDPrrof(TestDataFromExcel.IDPrrof);
-            Thread.sleep(1000);
-            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             CLDLPM.IDNumner();
+            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
             Thread.sleep(2000);
     	} 
        

@@ -27,7 +27,12 @@ public LeadObjectPageObject (WebDriver driver)
 		@FindBy(xpath="//button[normalize-space()='Ok']")
 		public static WebElement clk_closeProcessApplicationPopup;
 	    
-    
+		@FindBy(xpath="//span[@title = 'CRRSC']")
+		 public static WebElement clk_CRRSCtab ;
+
+	     @FindBy(xpath="//span[@title = 'Activities']")
+		 public static WebElement clk_Activitiestab ;
+	     
     
     
     

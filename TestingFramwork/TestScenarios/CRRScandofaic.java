@@ -19,7 +19,6 @@ public class CRRScandofaic {
 		Thread.sleep(500);
 		risk.sendKeys(Keys.DOWN);
 		risk.sendKeys(Keys.ENTER);
-
 		Select(driver, "cust_1169", "Employed");
 
 		WebElement emrisk = driver.findElement(By.name("cust_2444"));
