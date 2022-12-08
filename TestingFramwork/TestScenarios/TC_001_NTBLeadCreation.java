@@ -35,17 +35,29 @@ import org.testng.annotations.Listeners;
 	public void CreateNewLead() throws Exception
 	{   
 	   
-    	//launchBrowser();
+    	launchBrowser();
+    	Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
     	TDFX.DataRead();
-    	Thread.sleep(5000);
+    	Thread.sleep(500);
  		EnterUserName(TestDataFromExcel.UserName_CA);
+ 		Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
         EnterPassword(TestDataFromExcel.Password); 
         LoginButtonClick();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+       // CheckRole();
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+
         ClickOnsaleswidget();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
         ClickOnsalesJouney();
+        
         lopm.ClickOnOnBoardingJourney();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
         cspm.ClickOnOnBoardingJourneynext();
         Thread.sleep(2000);
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
@@ -64,12 +76,35 @@ import org.testng.annotations.Listeners;
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
         NTBSJPM.NTBJourneynext1();
         Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+        Thread.sleep(1000);
         NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
         NTBSJPM.Product(TestDataFromExcel.Product);
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
         NTBSJPM.NTBJourneynext2();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
-        Thread.sleep(2000);
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
+        
+        
         //CLDLPM.CreatedNewLeadEdit(); 
         //LoginPageRedircet(); 
         //LogoutButtonClick();
@@ -88,3 +123,4 @@ import org.testng.annotations.Listeners;
 
       
 }
+;
