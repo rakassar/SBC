@@ -330,5 +330,93 @@ public class CaseStagePageMethod extends HomePageMethod {
 			
 	    }
 
+		
+		
+		public void ContactInformationactipntype(String ContactInformationactipntype) throws InterruptedException
+	    {
+			Select ContactInformationact = new Select(CaseStagePageObject.sel_ContactInformationactipntype);
+		    Thread.sleep(2000);
+		    ContactInformationact.selectByVisibleText(ContactInformationactipntype);
+		    System.out.println("ContactInformationactipntype");
+		    Thread.sleep(2000);
+	    }
+		
+		public void CaseCustomerType(String CustomerType) throws InterruptedException
+	    {
+			Select CustomerType1 = new Select(CaseStagePageObject.sel_CustomerType);
+		    Thread.sleep(2000);
+		    CustomerType1.selectByVisibleText(CustomerType);
+		    System.out.println("CustomerType");
+		    Thread.sleep(2000);
+	    }
+		
+		public void casecountry(String country) throws InterruptedException
+	    {
+		/*	Select CustomerType1 = new Select(CaseStagePageObject.pic_Country);
+		    Thread.sleep(2000);
+		    CustomerType1.selectByVisibleText(country);
+		    System.out.println("country");
+		    Thread.sleep(2000);*/
+		    
+		    
+		    WebElement eco = CaseStagePageObject.pic_Country;
+	    	eco.sendKeys(country);
+			eco.sendKeys(Keys.DOWN);
+	    	eco.sendKeys(Keys.ENTER);
+	    	Thread.sleep(1000);
+	    	
+	    	
+	    	
+	    }
 
+		
+		public void CaseHosueNumber()
+	    {
+			Random r = new Random();
+			 String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+			    final int N = 6;
+			    StringBuilder sb = new StringBuilder();
+			    for (int i = 0; i < N; i++) {
+			        sb.append(alphabet.charAt(r.nextInt(alphabet.length())));
+			    }
+			    String firstname = sb.toString();			    
+			    CaseStagePageObject.ent_HouseNumber.sendKeys(firstname);
+			
+	    }
+
+		
+		public void caseStreet()
+	    {
+			Random r = new Random();
+			 String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+			    final int N = 6;
+			    StringBuilder sb = new StringBuilder();
+			    for (int i = 0; i < N; i++) {
+			        sb.append(alphabet.charAt(r.nextInt(alphabet.length())));
+			    }
+			    String firstname = sb.toString();			    
+			    CaseStagePageObject.ent_Street.sendKeys(firstname);
+			
+	    }
+		
+		public void casemobile()
+	    {
+	    	
+	Random rand = new Random();
+    int num1 = (rand.nextInt(7) + 1) * 100 + (rand.nextInt(8) * 10) + rand.nextInt(8);
+    int num2 = rand.nextInt(743);
+    int num3 = rand.nextInt(10000);
+
+    DecimalFormat df3 = new DecimalFormat("000"); // 3 zeros
+    DecimalFormat df4 = new DecimalFormat("0000"); // 4 zeros
+
+    String mnumbername = df3.format(num1) + df3.format(num2)  + df4.format(num3);
+    //SDmobilenumber=mnumbername;
+    CaseStagePageObject.ent_Mobile.sendKeys(mnumbername);
+			
+	    }
+		
+		
 }

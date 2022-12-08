@@ -93,9 +93,20 @@ Source=Branch Walkin
         screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
 	    Thread.sleep(1000); 
 		CJPM.NextOnCasePage(); 
-		home.scrollBy(); 
-		Thread.sleep(5000);
+		//scrollBy(); 
+		Thread.sleep(2000);
 	   //Stage1 Case Journey
+		
+		cs1pm.ContactInformationactipntype("Contact Creation");
+		Thread.sleep(1000);
+		cs1pm.CaseCustomerType("Employed");
+		Thread.sleep(1000);
+		cs1pm.casecountry("Albania");
+		Thread.sleep(1000);
+		cs1pm.CaseHosueNumber();
+		cs1pm.caseStreet();
+		cs1pm.casemobile();
+		
 		cs1pm.fill_DetailsInConcern("Test Details of Concern Field");
 		Thread.sleep(1000);
 	    cs1pm.SelectComputationRequest("Available Balance Computation");
