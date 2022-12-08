@@ -51,7 +51,7 @@ import org.testng.annotations.Listeners;
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
         CheckRole();
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
-
+       
         ClickOnsaleswidget();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
