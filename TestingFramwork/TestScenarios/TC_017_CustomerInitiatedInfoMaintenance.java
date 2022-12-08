@@ -30,7 +30,7 @@ order by caseid desc
 
 /*case creation by CA for SSC=Customer Initiated Info Maintenance
 Source=Branch Walkin
-Computation request=Available Balance Computation
+
 */
 
 

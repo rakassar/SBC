@@ -20,8 +20,12 @@ public class HomePageObject extends LoginPageObject {
 	 public static WebElement clk_leadpanesalesjourney ;
      
      
-
      
+     
+     
+
+     @FindBy(name="ProfileImage_header")
+     public static WebElement Clk_CheckRole ;
      
      @FindBy(id="BTN_NEW")
      public static WebElement clk_plussign;

@@ -35,13 +35,15 @@ public class CreateLeadAppointmentPageMethod extends HomePageMethod{
 	public void PreferredDayTime(String time)
 	{
 
-		/*
-		 * CreateLeadAppointmentPageObject.clk_ldPreferredDay.click();
-		 * CreateLeadAppointmentPageObject.clk_ldPreferredDay.sendKeys();
-		 */
 		
-		CreateLeadAppointmentPageObject.clk_ldPreferredTime.click();
-		CreateLeadAppointmentPageObject.snd_ldPreferredTime.sendKeys(time);
+		  CreateLeadAppointmentPageObject.clk_ldPreferredDay.click();
+		  //CreateLeadAppointmentPageObject.clk_ldPreferredDay.sendKeys();
+		 
+		
+		//CreateLeadAppointmentPageObject.clk_ldPreferredTime.click();
+	    CreateLeadAppointmentPageObject.clk_ldPreferredTime.sendKeys(time);
+
+		//CreateLeadAppointmentPageObject.snd_ldPreferredTime.sendKeys(time);
 		
 	
 		 //Select sal=new Select(CreateLeadAppointmentPageObject.snd_ldPreferredTime);
