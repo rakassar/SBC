@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import crm.mhc.pages.objects.CaseJourneyPageObject;
 import crm.mhc.pages.objects.CustomerSearchPageObject;
 import crm.mhc.pages.objects.HomePageObject;
+import crm.mhc.pages.objects.LoginPageObject;
 
 public class HomePageMethod extends LoginPageMethod{
 
@@ -18,6 +19,8 @@ public class HomePageMethod extends LoginPageMethod{
 		quick.moveToElement(HomePageObject.clk_leadpanesaleswidget).perform();
 		
 	}
+   
+ 
    
  //quick link and sales journey option
    public void ClickOnsalesJouney()
@@ -72,7 +75,14 @@ public class HomePageMethod extends LoginPageMethod{
        }
    
   
-
+   public void CheckRole() throws InterruptedException
+   {
+	   HomePageObject.Clk_CheckRole.click();
+	   Thread.sleep(1500);
+  	 
+  	 
+   }
+   
 
 
 public void scrollBy()

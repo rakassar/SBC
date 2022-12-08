@@ -197,21 +197,26 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    }
 		    
 		    
-		    public void Industry_Classification(String IndClsn)
+		    public void Industry_Classification(String IndClsn) throws InterruptedException
 		    {
 		    	WebElement Industry_Classification = CollectDocsLeadPageObject.sel_ldIndustrialClassification;
 				Industry_Classification.sendKeys(IndClsn);
+				Thread.sleep(1000);
 				Industry_Classification.sendKeys(Keys.DOWN);
+				Thread.sleep(500);
 				Industry_Classification.sendKeys(Keys.ENTER);
+				Thread.sleep(500);
 		    }
 		    
 		    public void NatureOfWork(String NTWORK) throws InterruptedException
 		    {
 		    	
 		    	WebElement Nature_work  = CollectDocsLeadPageObject.sel_ldNatureWork;
+		    	Thread.sleep(300);
 		    	Nature_work .sendKeys(NTWORK);
 		    	Thread.sleep(2000);
 		    	Nature_work .sendKeys(Keys.DOWN);
+		    	Thread.sleep(2000);
 		    	Nature_work .sendKeys(Keys.ENTER);
 		    	Thread.sleep(1000);
 		    }
@@ -301,10 +306,12 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 
 		    public void IDPrrof (String IDPrrof) throws InterruptedException
 		    {
+		    	Thread.sleep(500);
 		    	WebElement ID = CollectDocsLeadPageObject.pic_ldIdProof;
 				ID.sendKeys(IDPrrof);
 				Thread.sleep(2000);
 				ID.sendKeys(Keys.DOWN);
+				Thread.sleep(1000);
 				ID.sendKeys(Keys.ENTER);
 				Thread.sleep(1000);
 		    	
@@ -385,7 +392,9 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    {
 		    	WebElement eco = CollectDocsLeadPageObject.pic_ldeconomicActivity;
 		    	eco.sendKeys(economic);
+		    	Thread.sleep(1000);
 				eco.sendKeys(Keys.DOWN);
+				Thread.sleep(700);
 		    	eco.sendKeys(Keys.ENTER);
 		    	Thread.sleep(1000);
 		    	

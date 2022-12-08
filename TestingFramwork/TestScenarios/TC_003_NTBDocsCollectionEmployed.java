@@ -37,12 +37,15 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
     @Test
 	public void CreateNewLeadCollEmp() throws InterruptedException, IOException
 	{   
-    	//launchBrowser();
+    	launchBrowser();
+    	screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
     	TDFX.DataRead();
-    	Thread.sleep(5000);
  		EnterUserName(TestDataFromExcel.UserName_CA);
         EnterPassword(TestDataFromExcel.Password); 
+    	screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         LoginButtonClick();
+        CheckRole();
+    	screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         ClickOnsaleswidget();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
@@ -63,12 +66,33 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
         NTBSJPM.EnterlastName();
         NTBSJPM.EntermiddleName();
         NTBSJPM.EnterMobile();
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+
         NTBSJPM.NTBJourneynext1();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
         NTBSJPM.Product(TestDataFromExcel.Product);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         NTBSJPM.NTBJourneynext2();
+        Thread.sleep(1000);
+    	screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+    	screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.CreatedNewLeadEdit();
@@ -83,6 +107,8 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.Enteremail();
+        Thread.sleep(300);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.dob(TestDataFromExcel.dobmonth, TestDataFromExcel.dobdate, TestDataFromExcel.dobyear);
         CLDLPM.Gender(TestDataFromExcel.Gender);
         CLDLPM.PlcaeOfBirth();
@@ -95,8 +121,10 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.ClientSegment(TestDataFromExcel.ClientSegment);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.SoleOwner(TestDataFromExcel.SoleOwner);
         Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
 	}   
     
 
@@ -114,18 +142,17 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
         Thread.sleep(1000);
         CLDLPM.workingsince(TestDataFromExcel.workingsincemonth, TestDataFromExcel.workingsinceyear);
         Thread.sleep(1000);
-        Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
         CLDLPM.EconomicActivity(TestDataFromExcel.EconomicActivity);
-        Thread.sleep(1000);
+        Thread.sleep(500);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.Industry_Classification(TestDataFromExcel.Industry_Classification);
-        Thread.sleep(1000);
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.NatureOfWork(TestDataFromExcel.NatureOfWork);
         Thread.sleep(1000);
         CLDLPM.forEmployment(TestDataFromExcel.forEmployment);
-        Thread.sleep(1000);
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         /*employed steps end */  
@@ -137,22 +164,28 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
 	public void CreateNewLeadCollEmp4() throws InterruptedException, IOException
 	{ 
         CLDLPM.IDPrrof(TestDataFromExcel.IDPrrof);
-        Thread.sleep(2000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.IDNumner();
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.MaidanName();
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         //CLDLPM.Tin("");
         CLDLPM.AoCode(TestDataFromExcel.AoCode);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.ClickOnAddress();
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.streetfied();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CLDLPM.Zipcode(TestDataFromExcel.Zipcode);
-        Thread.sleep(1000);
-        CLDLPM.mailingaddress(TestDataFromExcel.mailingaddress);
-        lopm.saveAndProceed();
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        CLDLPM.mailingaddress(TestDataFromExcel.mailingaddress);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        lopm.saveAndProceed();
+        Thread.sleep(1000);
+   	    screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+
        
         //LogoutButtonClick();
         }
@@ -162,49 +195,74 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
  	public void CreateNewLeadCollEmp5() throws InterruptedException 
  	{    
     	 CLDLPM.clickClosePopup();
+    	 screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         scrollBy();
+         Thread.sleep(1000);
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         scrollBy();
+         Thread.sleep(1000);
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         scrollBy();
+         Thread.sleep(1000);
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         scrollBy();
+         Thread.sleep(1000);
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         scrollBy();
+         Thread.sleep(1000);
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         scrollBy();
+         Thread.sleep(1000);
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
          CLDLPM.clickCRRSCButton();
          Thread.sleep(1000);
-         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
     	//CLDLPM.leadredbutton();    	
      	CRRSC.AmlcUnJmf(TestDataFromExcel.AmlcUnJmf);
      	CRRSC.BankInternalChecklist(TestDataFromExcel.BankInternalChecklist);
      	CRRSC.AllegedPerdsonf(TestDataFromExcel.AllegedPerdsonf);
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
      	CRRSC.HPIOrJoint(TestDataFromExcel.HPIOrJoint);
      	CRRSC.BenifOFW(TestDataFromExcel.BenifOFW);
      	CRRSC.ForeignNational(TestDataFromExcel.ForeignNational);
      	CRRSC.NumberAccount(TestDataFromExcel.NeumberAccount);
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
      	CRRSC.EmploymentTypeCRRSC(TestDataFromExcel.EmploymentTypeCRRSC);
      	CRRSC.IndustryCRRSC(TestDataFromExcel.IndustryCRRSC);
      	Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
      	//CRRSC.EconomicActivityCRRSC(TestDataFromExcel.EconmicactivityeCRRSC);
         //Thread.sleep(1000);
      	CRRSC.ManagerialCRRSC(TestDataFromExcel.managerialCRRSC);
      	CRRSC.DirectDealingCRRSC(TestDataFromExcel.DirectDealingCRRSC);
      	Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         Thread.sleep(1000);
      	CRRSC.CityCRRSC(TestDataFromExcel.CityCRRSC);
      	//CRRSC.ProvinceCRRSC(TestDataFromExcel.ProvinceCRRSC);
      	//CRRSC.RiskCRRSC(TestDataFromExcel.RiskCRRSC);
      	Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
      	CRRSC.vicinityRRSC(TestDataFromExcel.vicinityRRSC);
+     	
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
      	CRRSC.intialdepositeRRSC(TestDataFromExcel.intialdepositeRRSC);
-     	CRRSC.customerdeclaredCRRSC(TestDataFromExcel.customerdeclaredCRRSC);   	
+     	
      	CRRSC.InwprdOutwordRRSC(TestDataFromExcel.InwprdOutwordRRSC);
+
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+     	CRRSC.customerdeclaredCRRSC(TestDataFromExcel.customerdeclaredCRRSC);   	
+     
+
+     	
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
      	CRRSC.ComfortableInformationRRSC(TestDataFromExcel.ComfortableInformationRRSC);
      	CRRSC.ComfortableDocumentsRRSC(TestDataFromExcel.ComfortableDocumentsRRSC);
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedCRRSC-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CRRSC.RemarksCRRSC("I am Indian!");
         CRRSC.Finish();
         Thread.sleep(1000);
@@ -214,36 +272,83 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
  	public void CreateNewLeadCollEmp6() throws InterruptedException 
  	{      
     	Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedOfac-");
+   	    CLDLPM.clickClosePopup();
+    	screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        lopm.ClickOnCRRSCtab();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
     	CLDLPM.CreatedNewLeadEdit();
         Thread.sleep(1000);
     	CLDLPM.clickEditOFAC(TestDataFromExcel.Ofac);
+    	Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
     	lopm.saveAndProceed();
     	Thread.sleep(1000);
+    	screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");    	
+
  	}
     
     @Test
  	public void CreateNewLeadCollEmp7() throws InterruptedException 
  	{      
-    	Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedFillAccount-");
+    	Thread.sleep(500);
+    	scrolldown();
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         FAIPM.ClickFillAccountInformation();
         FAIPM.RequestType(TestDataFromExcel.RequestTypef);
         FAIPM.Purposeofaccountopening(TestDataFromExcel.Purposeofaccountopening);
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedFillAccount-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         FAIPM.ADBRequired(TestDataFromExcel.ADBRequired);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         FAIPM.PromsEmail(TestDataFromExcel.PromsEmail);
-        Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedFillAccount-");
         FAIPM.sel_PromsSMS(TestDataFromExcel.PromsSMS);
         FAIPM.TransactionalEmail(TestDataFromExcel.TransactionalEmail);
         FAIPM.TransactionalSMS(TestDataFromExcel.TransactionalSMS);
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedFillAccount-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         CRRSC.Finish();
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedFillAccount-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         Thread.sleep(1000);
         
  	}
@@ -253,13 +358,13 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
  	public void CreateNewLeadCollEmp8() throws InterruptedException 
  	{      
     	Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedProcessApplication");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         lopm.ProcessApplication();
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployedFillAccount-");
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         lopm.ProcessApplicationPopUpClose();
-        Thread.sleep(77770);
-        
+        Thread.sleep(2000);
+        screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
  	}
     
     

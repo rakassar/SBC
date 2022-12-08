@@ -1,5 +1,7 @@
 package crm.mhc.pages.methods;
 import org.openqa.selenium.JavascriptExecutor;
+
+import crm.mhc.pages.objects.CRRSCLeadPageObject;
 import crm.mhc.pages.objects.HomePageObject;
 import crm.mhc.pages.objects.LeadObjectPageObject;
 import crm.mhc.pages.objects.IndividualSalesJourneyPageObject;
@@ -23,6 +25,21 @@ public class LeadObjectPageMethod extends HomePageMethod{
 
 	   LeadObjectPageObject.clk_saveandproceed.click();
  	}
+   public void ClickOnCRRSCtab()
+	
+	{
+	   LeadObjectPageObject.clk_CRRSCtab.click();
+		
+	}
+   
+
+//Click on Activities tab on lead detail page
+public void ClickOnActivitiestab()
+	
+	{
+	LeadObjectPageObject.clk_Activitiestab.click();
+		
+	}
    
    
    public void ProcessApplication()

@@ -33,6 +33,7 @@ import org.openqa.selenium.support.FindBy;
 		public static WebElement sel_NumberAccount;
 		
 		
+		
 		//Customer Details
 		@FindBy(name="cust_1169")
 		public static WebElement sel_EmploymentTypeCRRSC;
