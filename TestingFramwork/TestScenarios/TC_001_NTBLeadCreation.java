@@ -14,6 +14,9 @@ import crm.mhc.pages.methods.IndividualSalesJourneyPageMethod;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;		
 
+/* Lead creation process for NTB Individual
+ 
+ */
 
 //screen shot using listner class
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
@@ -81,6 +84,7 @@ import org.testng.annotations.Listeners;
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");
         Thread.sleep(1000);
         NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
+        Thread.sleep(500);
         NTBSJPM.Product(TestDataFromExcel.Product);
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_001_NTBLeadCreation-");

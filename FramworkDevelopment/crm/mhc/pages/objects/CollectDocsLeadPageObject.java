@@ -71,6 +71,10 @@ public static WebElement sel_ldIncomeRange;
 public static WebElement sel_ldIndustrialClassification;
 @FindBy(name="cust_57")
 public static WebElement sel_ldNatureWork;
+
+@FindBy(name="cust_2835")
+public static WebElement sel_ldNatureWorkNEW;
+
 @FindBy(name="cust_77")
 public static WebElement sel_ldOccupation;
 @FindBy(name="cust_80")

@@ -15,7 +15,9 @@ import crm.mhc.pages.methods.HomePageMethod;
 import crm.mhc.pages.methods.LeadObjectPageMethod;
 import crm.mhc.pages.methods.IndividualSalesJourneyPageMethod;
 
+/*Customer Onboarding process for NTB Unemployed Indidvidual
 
+*/
 //screen shot using listner class
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
 public class TC_004_LeadDocsCollectedUnEmployed extends HomePageMethod
@@ -69,6 +71,7 @@ public class TC_004_LeadDocsCollectedUnEmployed extends HomePageMethod
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_004_LeadDocsCollectedUnEmployed-");
         NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
+        Thread.sleep(500);
         NTBSJPM.Product(TestDataFromExcel.Product);
         screen.ScreenshotMethod("TC_004_LeadDocsCollectedUnEmployed-");
         NTBSJPM.NTBJourneynext2();

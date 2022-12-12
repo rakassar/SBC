@@ -3,8 +3,10 @@ package crm.mhc.pages.methods;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import crm.mhc.pages.objects.CaseJourneyPageObject;
+import crm.mhc.pages.objects.CaseStagePageObject;
 import crm.mhc.pages.objects.CustomerSearchPageObject;
 import crm.mhc.pages.objects.HomePageObject;
 import crm.mhc.pages.objects.LoginPageObject;
@@ -19,6 +21,20 @@ public class HomePageMethod extends LoginPageMethod{
 		quick.moveToElement(HomePageObject.clk_leadpanesaleswidget).perform();
 		
 	}
+   
+   public void clk_leadobject() throws InterruptedException
+
+	{
+		
+		   Actions quick1 = new Actions(driver);
+		   quick1.moveToElement(HomePageObject.clk_salesObject).perform();
+		   Thread.sleep(150);
+		   HomePageObject.clk_leadobject.click();
+	       
+	       //CaseStagePageObject.clk_caseobject4.click();
+	}
+   
+   
    
  
    

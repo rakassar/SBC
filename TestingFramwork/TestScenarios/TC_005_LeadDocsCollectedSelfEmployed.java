@@ -15,6 +15,8 @@ import crm.mhc.pages.methods.HomePageMethod;
 import crm.mhc.pages.methods.LeadObjectPageMethod;
 import crm.mhc.pages.methods.IndividualSalesJourneyPageMethod;
 
+/*Customer Onboarding process for NTB SelfEmployed Indidvidual
+*/
 
 //screen shot using listner class
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
@@ -73,6 +75,7 @@ public class TC_005_LeadDocsCollectedSelfEmployed extends HomePageMethod
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed-");
         NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
+        Thread.sleep(500);
         NTBSJPM.Product(TestDataFromExcel.Product);
         Thread.sleep(500);
         screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed-");

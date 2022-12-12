@@ -10,7 +10,32 @@ import crm.mhc.pages.objects.HomePageObject;
 
 public class CRRSCLeadPageMethod  extends HomePageMethod{
 
-	//Customer Customer Profile Section
+	//new CRRSC fields
+	public void PrpsOfAccntOpning(String PrpsOfAccntOpning)
+    {
+    	Select sel=new Select(CRRSCLeadPageObject.sel_PrpsOfAccntOpning);
+    	//sel.selectByValue(Product);
+    	sel.selectByVisibleText(PrpsOfAccntOpning);
+    }	
+	public void Sbol(String Sbol)
+    {
+    	Select sel=new Select(CRRSCLeadPageObject.sel_Sbol);
+    	//sel.selectByValue(Product);
+    	sel.selectByVisibleText(Sbol);
+    }	
+	public void OtherRskFctr(String OtherRskFctr)
+    {
+    	Select sel=new Select(CRRSCLeadPageObject.sel_OtherRskFctr);
+    	//sel.selectByValue(Product);
+    	sel.selectByVisibleText(OtherRskFctr);
+    }	
+	
+	
+	
+	
+	
+	
+	//OLD Customer Customer Profile Section
 	
 	public void AmlcUnJmf(String AmlcUnJmf)
     {

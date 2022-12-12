@@ -3,17 +3,24 @@ import org.testng.annotations.Test;
 
 import crm.mhc.common.Screenshot;
 import crm.mhc.common.TestDataFromExcel;
+import crm.mhc.pages.methods.CRRSCLeadPageMethod;
 import crm.mhc.pages.methods.CollectDocsLeadPageMethod;
 import crm.mhc.pages.methods.CustomerSerachPageMethod;
+import crm.mhc.pages.methods.FillAccountInformationPageMethod;
 import crm.mhc.pages.methods.HomePageMethod;
 import crm.mhc.pages.methods.LeadObjectPageMethod;
 import crm.mhc.pages.methods.IndividualSalesJourneyPageMethod;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;		
 
+/*
+ETB onboarding journey, Including open case dedupe
+*/
 
 //screen shot using listner class
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
@@ -26,6 +33,8 @@ import org.testng.annotations.Listeners;
 	IndividualSalesJourneyPageMethod NTBSJPM=new IndividualSalesJourneyPageMethod();
 	CollectDocsLeadPageMethod CLDLPM=new CollectDocsLeadPageMethod();
     TestDataFromExcel TDFX=new TestDataFromExcel();
+	CRRSCLeadPageMethod CRRSC= new CRRSCLeadPageMethod();
+    FillAccountInformationPageMethod FAIPM=new FillAccountInformationPageMethod();
     Screenshot screen=new Screenshot();
     @Test
 	public void ETBCreateNewLead() throws Exception
@@ -41,6 +50,7 @@ import org.testng.annotations.Listeners;
     	screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         LoginButtonClick();
         CheckRole();
+        Thread.sleep(500);
         screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
         ClickOnsaleswidget();
         Thread.sleep(1000);
@@ -76,33 +86,43 @@ import org.testng.annotations.Listeners;
             NTBSJPM.NTBJourneynext1();
             Thread.sleep(1000);
             NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
+            Thread.sleep(500);
             NTBSJPM.Product(TestDataFromExcel.Product);
             Thread.sleep(1000);
             screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             NTBSJPM.NTBJourneynext2();
             Thread.sleep(2000);
-            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             scrollBy();
             Thread.sleep(1000);
-            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             scrollBy();
             Thread.sleep(1000);
-            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             scrollBy();
             Thread.sleep(1000);
-            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             scrollBy();
             Thread.sleep(1000);
-            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             scrollBy();
             Thread.sleep(1000);
-            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             scrollBy();
             Thread.sleep(1000);
-            screen.ScreenshotMethod("TC_005_LeadDocsCollectedSelfEmployed");
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             //NTBSJPM.NTBignoreandCreate();
             CLDLPM.CheckEmployeetype();
             Thread.sleep(500);
+			lopm.ClickOnAddresstab();
+			Thread.sleep(500);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            scrollBy();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            scrollBy();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             CLDLPM.CreatedNewLeadEdit();
             Thread.sleep(1000);
             screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
@@ -184,10 +204,90 @@ import org.testng.annotations.Listeners;
             Thread.sleep(1000);
             screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
             Thread.sleep(3000);
+            
+			/*
+			 * try{driver.findElement(By.xpath("//button[@type = 'button'][1]")).click();
+			 * System.out.println("case dedupe fired");}
+			 * 
+			 * 
+			 * catch(NoSuchElementException e) { System.out.println("no case dedupe");
+			 */
+            NTBSJPM.CaseDedupeOnDocsLead();
     	} 
+        @Test
+    	public void ETBCreateNewLead5() throws InterruptedException, IOException
+    	
+    	{  
+        
+        Thread.sleep(1000);
+   	    CLDLPM.clickClosePopup();
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+    	CLDLPM.CreatedNewLeadEdit();
+        Thread.sleep(1000);
+    	CLDLPM.clickEditOFAC(TestDataFromExcel.Ofac);
+    	Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+    	lopm.saveAndProceed();
+    	Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+        scrollBy();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
        
     
-
+    	}
+        @Test
+    	public void ETBCreateNewLead6() throws InterruptedException, IOException
+     	{      
+        	Thread.sleep(500);
+        	lopm.ClickOnUpdtButton();
+        	Thread.sleep(500);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            lopm.popupdate360("No");
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            lopm.update360();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            FAIPM.ClickFillAccountInformation();
+            FAIPM.RequestType(TestDataFromExcel.RequestTypef);
+            FAIPM.Purposeofaccountopening(TestDataFromExcel.Purposeofaccountopening);
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            FAIPM.ADBRequired(TestDataFromExcel.ADBRequired);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            FAIPM.PromsEmail(TestDataFromExcel.PromsEmail);
+            FAIPM.sel_PromsSMS(TestDataFromExcel.PromsSMS);
+            FAIPM.TransactionalEmail(TestDataFromExcel.TransactionalEmail);
+            FAIPM.TransactionalSMS(TestDataFromExcel.TransactionalSMS);
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            CRRSC.Finish();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            Thread.sleep(1000);
+            
+            
+     	}
+        @Test
+    	public void ETBCreateNewLead7() throws InterruptedException, IOException
+     	{      
+        	Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            lopm.ProcessApplication();
+            Thread.sleep(1000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+            lopm.ProcessApplicationPopUpClose();
+            Thread.sleep(2000);
+            screen.ScreenshotMethod("TC_006_ETBLeadCreation-");
+     	}
+        
       //screen shot using listner class
     /* @Test
 	  public void TestToPass() 
