@@ -13,6 +13,11 @@ import crm.mhc.pages.methods.LeadObjectPageMethod;
 import crm.mhc.pages.methods.IndividualSalesJourneyPageMethod;
 import crm.mhc.pages.methods.CreateLeadAppointmentPageMethod;
 
+/* Lead creation & appointment stage for NTB individual
+ * 
+ */
+
+
 //screen shot via listner class
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
 
@@ -69,6 +74,7 @@ public class TC_002_NTBLeadAppointment extends HomePageMethod
         screen.ScreenshotMethod("TC_002_NTBLeadAppointment-");
         Thread.sleep(1000);
         NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
+        Thread.sleep(500);
         NTBSJPM.Product(TestDataFromExcel.Product);
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_002_NTBLeadAppointment-");

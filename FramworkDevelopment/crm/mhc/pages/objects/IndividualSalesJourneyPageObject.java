@@ -57,8 +57,9 @@ public static WebElement clk_NTBONBourneynext2;
 @FindBy(xpath="//select[@name='LE_LEADRATING']")
 public static WebElement sel_LeadRating;
 @FindBy(xpath="//button[contains(@class,'button')][1]")
-public static WebElement clk_ignoreandcreate
-;
+public static WebElement clk_ignoreandcreate;
+@FindBy(xpath="//button[@type = 'button'][1]")
+public static WebElement clk_casededupeonlead;
 
 
 

@@ -22,6 +22,18 @@ public class HomePageObject extends LoginPageObject {
      
      
      
+     @FindBy(className="icon-sales")
+     public static WebElement clk_salesObject;
+     
+     @FindBy(css="span[title='Leads']")
+     public static WebElement clk_leadobject;
+     
+     
+
+
+
+     
+     
      
 
      @FindBy(name="ProfileImage_header")

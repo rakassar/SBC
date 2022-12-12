@@ -14,8 +14,17 @@ import org.openqa.selenium.support.FindBy;
 			// TODO Auto-generated constructor stub
 		}
 
-	
+	    //New CRRSC fields
+		@FindBy(name="cust_497")
+		public static WebElement sel_PrpsOfAccntOpning;
+		@FindBy(name="cust_2845")
+		public static WebElement sel_Sbol;
+		@FindBy(name="cust_2846")
+		public static WebElement sel_OtherRskFctr;
         
+		
+		
+		
 		//Customer Customer Profile Section
 		@FindBy(name="cust_1699")
 		public static WebElement sel_AmlcUnJmf;

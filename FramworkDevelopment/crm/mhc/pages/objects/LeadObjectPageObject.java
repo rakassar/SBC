@@ -29,12 +29,32 @@ public LeadObjectPageObject (WebDriver driver)
 	    
 		@FindBy(xpath="//span[@title = 'CRRSC']")
 		 public static WebElement clk_CRRSCtab ;
+		
+		@FindBy(xpath="//span[@title = 'Address']")
+		 public static WebElement clk_Addresstab ;
 
 	     @FindBy(xpath="//span[@title = 'Activities']")
 		 public static WebElement clk_Activitiestab ;
 	     
     
-    
+	     @FindBy(name="QueryCategoryId")
+	     public static WebElement sel_leadView;
+	    
+	     
+	     @FindBy(css="select[name='QueryViewId']") 
+	   public static WebElement clk_selectview;
+	     
+	     @FindBy(xpath="//a[@class='filterGroup__button acid-btn acid-btn--outline-brand']")
+	     public static WebElement clk_arrorw ;
+	     
+	     @FindBy(xpath="//label[@for='checkbox0']")
+	     public static WebElement clk_selectlead ;
+	     
+	     @FindBy(css="[data-autoid='LeadID_0']")
+	     public static WebElement clk_selectthelead ;
+	     
+	     @FindBy(xpath="//i[@title='Self Assign']")
+	     public static WebElement clk_selfassignlead ;
     
     
     @FindBy(id="BTN_NEW")
@@ -62,6 +82,27 @@ public LeadObjectPageObject (WebDriver driver)
     public static WebElement btn_Clickleadsearch;
     @FindBy(id="BTN_EDIT")
     public static WebElement btn_ClickOnEditButton;
+    
+    @FindBy(xpath="//span[normalize-space()='Update to 360']")
+    public static WebElement btn_ClickOnUpdtButton;
+    
+    
+    @FindBy(name="cust_2739")
+    public static WebElement Sel_popupdt360;
+    
+   //update button
+    @FindBy(xpath="//span[normalize-space()='Update']")
+	public static WebElement clk_update360;
+    
+    //BM  approve button
+    @FindBy(xpath="//span[normalize-space()='Approved']")
+	public static WebElement clk_BmApproveBttn;
+    
+  //BM  comments box button
+    @FindBy(name="LE_DESCRIPTION")
+	public static WebElement clk_BmComments;
+    
+  
     
     
     

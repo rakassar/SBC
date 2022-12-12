@@ -601,6 +601,30 @@ public class IndividualSalesJourneyPageMethod extends HomePageMethod {
 		IndividualSalesJourneyPageObject.picserselect_COLCampaign.click();
 	}
 
+	public void CaseDedupeOnDocsLead() throws InterruptedException {
+		
+	  //IndividualSalesJourneyPageObject.clk_NTBONBourneynext2.click();
+	  Thread.sleep(1000);
+	  System.out.println("Click on Next");	
+	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	  
+	  try {
+		  
+        // check visibility with isDisplayed()
+        if (IndividualSalesJourneyPageObject.clk_casededupeonlead.isDisplayed()){
+           System.out.println("open case for customer maintainence SSC !");
+           IndividualSalesJourneyPageObject.clk_casededupeonlead.click();
+     }
+	  }
+     catch(Exception n)   {
+        System.out.println("No open case for customer maintainence SSC !");
+     }
+	}
+	
+	
+	
+	
+	
 	// *********end ***************Fill the Info for COL
 	// process*****************************-------------//
 

@@ -221,6 +221,19 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    	Thread.sleep(1000);
 		    }
 		    
+		    public void NatureOfWorkNEW(String NTWORK) throws InterruptedException
+		    {
+		    	
+		    	WebElement Nature_work  = CollectDocsLeadPageObject.sel_ldNatureWorkNEW;
+		    	Thread.sleep(300);
+		    	Nature_work .sendKeys(NTWORK);
+		    	Thread.sleep(2000);
+		    	Nature_work .sendKeys(Keys.DOWN);
+		    	Thread.sleep(2000);
+		    	Nature_work .sendKeys(Keys.ENTER);
+		    	Thread.sleep(1000);
+		    }
+		    
 		    public void occupation (String Occupation)
 		    {
 		    	Select sel = new Select(CollectDocsLeadPageObject.sel_ldOccupation);
@@ -451,5 +464,6 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
   		
 		    	
 		    }
+              
 		    
 }

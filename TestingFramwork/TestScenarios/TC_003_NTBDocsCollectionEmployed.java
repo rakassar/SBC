@@ -15,7 +15,10 @@ import crm.mhc.pages.methods.HomePageMethod;
 import crm.mhc.pages.methods.LeadObjectPageMethod;
 import crm.mhc.pages.methods.IndividualSalesJourneyPageMethod;
 
+/*Customer Onboarding process for NTB employed Indidvidual
 
+To run on G7 please change nature of work field and uncomment the CRRSC section
+*/
 
 //screen shot using listner class
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
@@ -72,6 +75,7 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         NTBSJPM.ProductCategory(TestDataFromExcel.ProductCategory);
+        Thread.sleep(500);
         NTBSJPM.Product(TestDataFromExcel.Product);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         NTBSJPM.NTBJourneynext2();
@@ -150,7 +154,7 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
         CLDLPM.Industry_Classification(TestDataFromExcel.Industry_Classification);
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
-        CLDLPM.NatureOfWork(TestDataFromExcel.NatureOfWork);
+        CLDLPM.NatureOfWorkNEW(TestDataFromExcel.NatureOfWork);  // remove New to run on g7
         Thread.sleep(1000);
         CLDLPM.forEmployment(TestDataFromExcel.forEmployment);
         Thread.sleep(1000);
@@ -217,7 +221,10 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
          CLDLPM.clickCRRSCButton();
          Thread.sleep(1000);
          screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
-    	//CLDLPM.leadredbutton();    	
+    	//CLDLPM.leadredbutton();  
+         
+         
+        /*   OLD CRRSC 
      	CRRSC.AmlcUnJmf(TestDataFromExcel.AmlcUnJmf);
      	CRRSC.BankInternalChecklist(TestDataFromExcel.BankInternalChecklist);
      	CRRSC.AllegedPerdsonf(TestDataFromExcel.AllegedPerdsonf);
@@ -263,9 +270,23 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
      	CRRSC.ComfortableDocumentsRRSC(TestDataFromExcel.ComfortableDocumentsRRSC);
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
-        CRRSC.RemarksCRRSC("I am Indian!");
-        CRRSC.Finish();
-        Thread.sleep(1000);
+        */
+         
+         
+         //New CRRSC
+         CRRSC.AmlcUnJmf(TestDataFromExcel.AmlcUnJmf);
+         CRRSC.HPIOrJoint(TestDataFromExcel.HPIOrJoint);
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         CRRSC.BenifOFW(TestDataFromExcel.BenifOFW);
+         CRRSC.PrpsOfAccntOpning(TestDataFromExcel.PrpsOfAccntOpning);
+         CRRSC.Sbol(TestDataFromExcel.Sbol);
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         CRRSC.OtherRskFctr(TestDataFromExcel.OtherRskFctr);         
+         CRRSC.RemarksCRRSC("I am Indian!");
+         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
+         CRRSC.Finish();
+        
+         Thread.sleep(1000);
  	}
     
     @Test
@@ -293,7 +314,7 @@ public class TC_003_NTBDocsCollectionEmployed extends HomePageMethod
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         lopm.ClickOnCRRSCtab();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         screen.ScreenshotMethod("TC_003_NTBDocsCollectionEmployed-");
         scrollBy();
         Thread.sleep(1000);
