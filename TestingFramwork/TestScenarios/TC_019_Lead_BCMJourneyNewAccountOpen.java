@@ -36,7 +36,7 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
     
     
     
-    @Test
+    @Test(priority=1)
 	public void LeadHighRiskBCM() throws InterruptedException, IOException
 	{   
     	launchBrowser();
@@ -60,7 +60,7 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
 	}   
     
 
-    @Test
+    @Test(priority=2)
 	public void LeadHighRiskBCM1() throws InterruptedException, IOException
 	{   
         NTBSJPM.SalutationID(TestDataFromExcel.SalutationID);
@@ -103,7 +103,7 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
         
 	}
 
-    @Test
+    @Test(priority=3)
 	public void LeadHighRiskBCM2() throws InterruptedException, IOException
 	{  
         CLDLPM.selectstatuscode(); 
@@ -131,7 +131,7 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
 	}   
     
 
-    @Test
+    @Test(priority=4)
 	public void LeadHighRiskBCM3() throws InterruptedException, IOException
 	{ 
        /*employed steps start */
@@ -163,7 +163,7 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
 	}
     
 
-    @Test
+    @Test(priority=5)
 	public void LeadHighRiskBCM4() throws InterruptedException, IOException
 	{ 
         CLDLPM.IDPrrof(TestDataFromExcel.IDPrrof);
@@ -194,7 +194,7 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
         }
     
     
-    @Test
+    @Test(priority=6)
  	public void LeadHighRiskBCM5() throws InterruptedException 
  	{    
     	 CLDLPM.clickClosePopup();
@@ -289,7 +289,7 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
          Thread.sleep(1000);
  	}
     
-    @Test
+    @Test(priority=7)
  	public void LeadHighRiskBCM6() throws InterruptedException 
  	{      
     	Thread.sleep(1000);
@@ -349,11 +349,12 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
 
  	}
     
-    @Test
- 	public void LeadHighRiskBCM7() throws InterruptedException 
+    @Test(priority=8)
+ 	public void LeadHighRiskBCM7() throws InterruptedException, IOException 
  	{ 
     //LogoutButtonClick();
     launchBrowser();
+    TDFX.DataRead();
     Thread.sleep(1000);
     screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
     EnterUserName(TestDataFromExcel.UserName_BranchBCM);
@@ -366,8 +367,11 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
     lopm.categoryview("Deposit-Individual");
     lopm.selfassignlead("Need Approval");
     lopm.leadview("Assigned Leads");
+    Thread.sleep(500);
     lopm.onMyBucketlead();
+    Thread.sleep(500);
     lopm.BmApproveButtonclk();
+    Thread.sleep(500);
     lopm.BmApproveComments("BM Comments");
     lopm.BmApproveUpdate();
     screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
@@ -389,12 +393,15 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
     scrollBy();
     Thread.sleep(1000);
     screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
+    QuiteBrowser();
  	}
     
-    @Test
+    @Test(priority=9)
  	public void LeadHighRiskBCM8() throws InterruptedException 
- 	{ 
-        LogoutButtonClick();
+ 	
+ 	{   
+    	
+    	launchBrowser();
     	Thread.sleep(1000);
         screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
         EnterUserName(TestDataFromExcel.UserName_CA);
@@ -406,12 +413,14 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
         clk_leadobject();
         lopm.categoryview("Deposit-Individual");
         lopm.leadview("Assigned Leads");
+        Thread.sleep(1000);
         lopm.onMyBucketlead();
+        Thread.sleep(1000);
 
  	}
  	
     
-    @Test
+    @Test(priority=10)
  	public void LeadHighRiskBCM9() throws InterruptedException 
  	{      
     	Thread.sleep(500);
@@ -433,16 +442,18 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
         CRRSC.Finish();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
-        Thread.sleep(1000);
+        
+        //
+       
         
  	}
     
-    
-    @Test
+   
+      @Test(priority=11)
  	public void LeadHighRiskBCM10() throws InterruptedException 
  	{      
-    	Thread.sleep(1000);
         screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
+        Thread.sleep(1000);
         lopm.ProcessApplication();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
@@ -451,17 +462,7 @@ public class TC_019_Lead_BCMJourneyNewAccountOpen extends HomePageMethod
         screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
  	}
     
-    
-	/*
-	 * //screen shot using listner class
-	 * 
-	 * @Test public void TestToPass() {
-	 * System.out.println("This method to Check Fail Or Pass");
-	 * Assert.assertTrue(true);
-	 * 
-	 * }
-	 */
-
+   
      }
 	
       
