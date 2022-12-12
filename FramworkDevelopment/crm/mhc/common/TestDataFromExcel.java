@@ -74,6 +74,12 @@ public class TestDataFromExcel implements Properties {
 	
 	
 //CRSC
+	
+	//New Fields
+	public static String PrpsOfAccntOpning;
+	public static String Sbol;
+	public static String OtherRskFctr;
+	
 	public static String AmlcUnJmf;
 	public static String BankInternalChecklist;
 	public static String AllegedPerdsonf;
@@ -177,6 +183,7 @@ Ofac=sheet.getRow(33).getCell(1).getStringCellValue();
 
 
 //CRRSC
+  
 AmlcUnJmf=sheet1.getRow(0).getCell(1).getStringCellValue();
 BankInternalChecklist=sheet1.getRow(1).getCell(1).getStringCellValue();
 AllegedPerdsonf=sheet1.getRow(2).getCell(1).getStringCellValue();
@@ -198,6 +205,11 @@ EconmicactivityeCRRSC=sheet1.getRow(17).getCell(1).getStringCellValue();
 managerialCRRSC=sheet1.getRow(18).getCell(1).getStringCellValue();
 DirectDealingCRRSC=sheet1.getRow(19).getCell(1).getStringCellValue();
 customerdeclaredCRRSC=sheet1.getRow(20).getCell(1).getStringCellValue();
+
+//New Fields CRRSC 
+PrpsOfAccntOpning = sheet1.getRow(21).getCell(1).getStringCellValue();
+Sbol =              sheet1.getRow(22).getCell(1).getStringCellValue();
+OtherRskFctr =      sheet1.getRow(23).getCell(1).getStringCellValue();
 
 
 
