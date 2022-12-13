@@ -57,6 +57,13 @@ public static WebElement pic_ldclientsegment;
 @FindBy(name="cust_162")
 public static WebElement sel_ldSoleOwner;
 
+
+@FindBy(name="cust_1960")
+public static WebElement sel_ldrelationshiptype;
+
+@FindBy(name="cust_898")
+public static WebElement sel_ldOnlyBBNrequired;
+
 //Employment section
 
 @FindBy(name="cust_63")
@@ -111,6 +118,11 @@ public static WebElement sel_ldAoCode;
 public static WebElement pic_ldCountry;
 @FindBy(xpath="//span[@title='Address']")
 public static WebElement clk_ldAddressTab;
+
+
+@FindBy(xpath="//span[@title='Address Details']")
+public static WebElement clk_ldAddressTabNonindi;
+
 @FindBy(name="LE_ZIP_CODE")
 public static WebElement pic_ldZipCode;
 @FindBy(name="LE_LOCALITY")
@@ -139,6 +151,9 @@ public static WebElement sel_Ofac;
 @FindBy(xpath="//span[normalize-space()='Perform CRRSC']") 
 public static WebElement clk_CRRSCBtn;
 
+@FindBy(xpath="//span[normalize-space()='Add Secondary Lead']") 
+public static WebElement clk_addScndryLeadButton;
+
 
 
 
@@ -147,4 +162,30 @@ public static WebElement clk_CRRSCBtn;
  * static WebElement clk_CRRSCTAB;
  */
 
+//Non individual fields
+@FindBy(name="cust_49")
+public static WebElement sel_ldcustomerCategory;
+
+@FindBy(xpath="//input[@title = 'MM/DD/YYYY']")
+public static WebElement clk_BusinessExpiry;
+
+@FindBy(name="cust_56")
+public static WebElement sel_ldTypeOfCorp;
+
+@FindBy(xpath="//a[@data-autoid='cust_1391_srch']")
+public static WebElement sel_ldCorporateDocumentPickerCLK;
+
+@FindBy(name="cust_928")
+public static WebElement sel_ldEntityType;
+
+@FindBy(id="select-all-checkbox")
+public static WebElement sel_ldCorporateDocumentPickerCheck;
+
+@FindBy(name="cust_526")
+public static WebElement pic_ldZipCodeNonIndi;
+@FindBy(name="cust_527")
+public static WebElement ent_ldStreetNonIndi;
+
+@FindBy(xpath="//span[normalize-space()='Perform CRRSC - Non Ind']") 
+public static WebElement clk_CRRSCBtnNonIndi;
 }

@@ -264,6 +264,17 @@ public static WebElement picserselect_COLCampaign ;
 
 //***********End*************Fill the Info for COL process*****************************-------------//
 
+
+
+//Non individual
+@FindBy(name="cust_494")
+public static WebElement ent_ldCompanyName;
+
+@FindBy(name="cust_1261")
+public static WebElement sel_ldInterestedIn;
+
+
+
 }
 
 

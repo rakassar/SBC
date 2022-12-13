@@ -169,6 +169,8 @@ public class IndividualSalesJourneyPageMethod extends HomePageMethod {
 
 		IndividualSalesJourneyPageObject.clk_ignoreandcreate.click();
 	}
+	
+
 
 //***********Start*************no use Fill the Info for COL process*****************************-------------//	
 
@@ -620,6 +622,29 @@ public class IndividualSalesJourneyPageMethod extends HomePageMethod {
         System.out.println("No open case for customer maintainence SSC !");
      }
 	}
+	
+	  
+	  //Non individual
+	  public void CompanyName() {
+			Random r = new Random();
+			String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+			final int N = 6;
+			StringBuilder sb = new StringBuilder();
+			for (int i = 0; i < N; i++) {
+				sb.append(alphabet.charAt(r.nextInt(alphabet.length())));
+			}
+			String firstname = sb.toString();
+
+			IndividualSalesJourneyPageObject.ent_ldCompanyName.sendKeys(firstname);
+		
+	}
+	  public void InterestedIn(String InterestedIn) {
+			Select sel = new Select(IndividualSalesJourneyPageObject.sel_ldInterestedIn);
+			// sel.selectByValue(Product);
+			sel.selectByVisibleText(InterestedIn);
+		}
+
 	
 	
 	

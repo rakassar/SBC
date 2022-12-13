@@ -64,6 +64,8 @@ import org.openqa.selenium.support.FindBy;
 
 		@FindBy(name="cust_1520")
 		public static WebElement sel_CityCRRSC;
+		@FindBy(name="cust_70")
+		public static WebElement sel_CityCRRSCNonIndi;
 		@FindBy(name="cust_1519")
 		public static WebElement sel_ProvinceCRRSC;
 		@FindBy(name="cust_1716")
