@@ -581,6 +581,13 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
   		    	CollectDocsLeadPageObject.clk_CRRSCBtnNonIndi.click();
   		    	
   		    }
+              public void PlantAddresssameasOfficeAddress(String padassameprad) throws InterruptedException
+  		    {
+  		    	Select sel1 = new Select(CollectDocsLeadPageObject.sel_ldperaddaspreaddNonIndi);
+  		    	sel1.selectByVisibleText(padassameprad);
+  				
+  				
+  		    }
                 
               
 		    

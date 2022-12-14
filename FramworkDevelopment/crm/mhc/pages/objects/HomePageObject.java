@@ -19,7 +19,9 @@ public class HomePageObject extends LoginPageObject {
      @FindBy(xpath="//*[@id=\"QuickLinksDiv\"]/ul/li[4]/a")
 	 public static WebElement clk_leadpanesalesjourney ;
      
-     
+   
+     @FindBy(xpath="//span[text()='Loan Journey']")
+	 public static WebElement clk_leadpaneLoanJourney ;
      
      
      @FindBy(className="icon-sales")

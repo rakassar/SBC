@@ -46,6 +46,7 @@ public void ChooseBBNfromList()
   
 }
 
+
 public void clickonredbutton()
 
 {
@@ -102,6 +103,20 @@ public void ClickOnNextButtonOnCustomerSearch()
 
 	 CustomerSearchPageObject.clk_NextOnCustomerSerach1.click();
 	}
+
+public void BBNFillForCustomerSearchNonIndi(String BBN)
+
+{
+ CustomerSearchPageObject.ent_fillBBNnumberNonIndi.click();
+ CustomerSearchPageObject.ent_fillBBNnumberNonIndi.sendKeys(BBN);
+ 
+}
+public void ChooseBBNfromListNonIndi()
+
+{
+ CustomerSearchPageObject.clk_topBBNNonIndi.click();
+  
+}
 
 
 

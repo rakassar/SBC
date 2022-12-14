@@ -188,4 +188,7 @@ public static WebElement ent_ldStreetNonIndi;
 
 @FindBy(xpath="//span[normalize-space()='Perform CRRSC - Non Ind']") 
 public static WebElement clk_CRRSCBtnNonIndi;
+
+@FindBy(name="cust_1516")
+public static WebElement sel_ldperaddaspreaddNonIndi;
 }
