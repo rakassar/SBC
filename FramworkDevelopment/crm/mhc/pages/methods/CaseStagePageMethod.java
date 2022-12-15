@@ -244,6 +244,15 @@ public class CaseStagePageMethod extends HomePageMethod {
 		    Thread.sleep(2000);
 	    }
 		
+		public void ForEmployement(String ForEmployement) throws InterruptedException
+	    {
+
+		    Select sForEmployement= new Select(CaseStagePageObject.sel_forEmployment);
+		    Thread.sleep(2000);
+		    sForEmployement.selectByVisibleText(ForEmployement);
+		    System.out.println("Reported System");
+		    Thread.sleep(2000);
+	    }
 		
 		public void EmployeeInvolved(String txt_EmployeeInvolved)
 	    {
@@ -361,6 +370,7 @@ public class CaseStagePageMethod extends HomePageMethod {
 		    
 		    WebElement eco = CaseStagePageObject.pic_Country;
 	    	eco.sendKeys(country);
+	    	Thread.sleep(1000);
 			eco.sendKeys(Keys.DOWN);
 	    	eco.sendKeys(Keys.ENTER);
 	    	Thread.sleep(1000);
@@ -418,5 +428,15 @@ public class CaseStagePageMethod extends HomePageMethod {
 			
 	    }
 		
+		
+		
+		public void CaseTypeofRequest(String TypeofRequest) throws InterruptedException
+	    {
+			Select Request = new Select(CaseStagePageObject.sel_TypeofRequest);
+		    Thread.sleep(2000);
+		    Request.selectByVisibleText(TypeofRequest);
+		    System.out.println("TypeofRequest");
+		    Thread.sleep(2000);
+	    }
 		
 }

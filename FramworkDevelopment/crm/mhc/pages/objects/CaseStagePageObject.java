@@ -170,6 +170,13 @@ public static WebElement ent_HouseNumber;
 public static WebElement ent_Street;
 @FindBy(name="cust_1687")
 public static WebElement ent_Mobile;
+@FindBy(name="cust_2371")
+public static WebElement sel_forEmployment;
+
+@FindBy(name="cust_670")
+public static WebElement sel_TypeofRequest
+;
+
 
 
 

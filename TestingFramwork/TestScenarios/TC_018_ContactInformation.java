@@ -34,7 +34,7 @@ Source=Branch Walkin
 */
 
 
-   public class TC_017_CustomerInitiatedInfoMaintenance extends HomePageMethod
+   public class TC_018_ContactInformation extends HomePageMethod
    {
 	//Object for methods class
 	CustomerSerachPageMethod cspm=new CustomerSerachPageMethod();
@@ -59,61 +59,64 @@ Source=Branch Walkin
     	Thread.sleep(5000);
  		EnterUserName(TestDataFromExcel.UserName_CA);
  		Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
         EnterPassword(TestDataFromExcel.Password); 
         LoginButtonClick();
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
         ClickOnsaleswidget();
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
         ClickOnCaseJouney();
         CJPM.IndividualCaseJorney();
         cspm.BBNFillForCustomerSearch(TestDataFromExcel.BBN);
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
         cspm.ClickOnNextButtonOnCustomerSearch();
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
         cspm.ChooseBBNfromList();
         Thread.sleep(1000);
         cspm.clickstartjourney();
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
         Thread.sleep(1000);
         cspm.CustomerServiceJourney();
         Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
         Thread.sleep(2000);
-        CJPM.FillSSC("Customer Initiated Info Maintenance");
+        CJPM.FillSSC("Contact Information");
        	CJPM.Source("Branch Walkin");
 	    Thread.sleep(1000); 
 	    CJPM.creditcardproduct();
 	    Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+		cs1pm.ContactInformationactipntype("Contact Creation");
+	    Thread.sleep(1000);
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
 	    Thread.sleep(1000); 
 		CJPM.NextOnCasePage(); 
 		//scrollBy(); 
 		Thread.sleep(2000);
 	   //Stage1 Case Journey
 		
-		cs1pm.ContactInformationactipntype("Contact Creation");
+	
 		Thread.sleep(1000);
 		cs1pm.casecountry("Albania");
 		Thread.sleep(1000);
 		cs1pm.CaseHosueNumber();
 		cs1pm.caseStreet();
 		cs1pm.casemobile();
-		cs1pm.CaseCustomerType("Employed");		
-		Thread.sleep(1000);
-		cs1pm.ForEmployement("Yes");
+		//cs1pm.CaseCustomerType("Employed");		
+		//Thread.sleep(1000);
+		//cs1pm.ForEmployement("Yes");
 		
 		
 		cs1pm.fill_DetailsInConcern("Test Details of Concern Field");
 		Thread.sleep(1000);
 	    //cs1pm.SelectComputationRequest("Available Balance Computation");
+		cs1pm.CaseTypeofRequest("Loan Availment"); 
 	    Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
 		Thread.sleep(1000); 
 		cs1pm.fill_Remarks("Successful Case Creation");
 		Thread.sleep(1000); 
@@ -127,31 +130,31 @@ Source=Branch Walkin
 	    //TDFX.DataRead();
 	 	EnterUserName(TestDataFromExcel.UserName_BBGCDMaintenanceAnalyst);
 	 	Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
 	    EnterPassword(TestDataFromExcel.Password); 
 	    LoginButtonClick();
 	    Thread.sleep(1000);
 	    cs1pm.clk_caseobject();
 	    Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
 	    Thread.sleep(1000);
 	    cs1pm.clk_selfassigncase("Assigned to Department");
 	    Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
 	    Thread.sleep(1000);
 	    cs1pm.sel_caseview("Assigned to Me");
 	    Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
 	    //cs1pm.clk_onMycaseview_220("Assigned to Me");
 	    Thread.sleep(1000);
 	    cs1pm.clk_onMyBucketcase();
 	    cs1pm.clk_caseEditButton();
 	    Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
 	    cs1pm.sel_depetdecison("Accept");
 	    cs1pm.fill_Remarks("rizwan");
 	    Thread.sleep(1000);
-        screen.ScreenshotMethod("TC_017_CustomerInitiatedInfoMaintenance-");
+        screen.ScreenshotMethod("TC_018_ContactInformation-");
 	    CJPM.casesaveAndProceed();
 	    Thread.sleep(5000);
 		//LogoutButtonClick();
