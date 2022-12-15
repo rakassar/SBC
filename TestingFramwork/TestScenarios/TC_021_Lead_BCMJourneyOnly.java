@@ -37,7 +37,7 @@ public class TC_021_Lead_BCMJourneyOnly extends HomePageMethod
     
     
    
-    @Test
+    @Test(priority=1)
  	public void LeadHighRiskBCM7() throws InterruptedException, IOException 
  	{ 
     //LogoutButtonClick();
@@ -55,8 +55,11 @@ public class TC_021_Lead_BCMJourneyOnly extends HomePageMethod
     lopm.categoryview("Deposit-Individual");
     lopm.selfassignlead("Need Approval");
     lopm.leadview("Assigned Leads");
+    Thread.sleep(500);
     lopm.onMyBucketlead();
+    Thread.sleep(500);
     lopm.BmApproveButtonclk();
+    Thread.sleep(500);
     lopm.BmApproveComments("BM Comments");
     lopm.BmApproveUpdate();
     screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
@@ -81,7 +84,7 @@ public class TC_021_Lead_BCMJourneyOnly extends HomePageMethod
     QuiteBrowser();
  	}
     
-    @Test
+    @Test(priority=2)
  	public void LeadHighRiskBCM8() throws InterruptedException 
  	
  	{   
@@ -98,12 +101,14 @@ public class TC_021_Lead_BCMJourneyOnly extends HomePageMethod
         clk_leadobject();
         lopm.categoryview("Deposit-Individual");
         lopm.leadview("Assigned Leads");
+        Thread.sleep(1000);
         lopm.onMyBucketlead();
+        Thread.sleep(1000);
 
  	}
  	
     
-    @Test
+    @Test(priority=3)
  	public void LeadHighRiskBCM9() throws InterruptedException 
  	{      
     	Thread.sleep(500);
@@ -125,16 +130,18 @@ public class TC_021_Lead_BCMJourneyOnly extends HomePageMethod
         CRRSC.Finish();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
-        Thread.sleep(1000);
+        
+        //
+       
         
  	}
     
-    
-    @Test
+   
+      @Test(priority=4)
  	public void LeadHighRiskBCM10() throws InterruptedException 
  	{      
-    	Thread.sleep(1000);
         screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");
+        Thread.sleep(1000);
         lopm.ProcessApplication();
         Thread.sleep(1000);
         screen.ScreenshotMethod("TC_019__Lead_BCMJourneyNewAccount-");

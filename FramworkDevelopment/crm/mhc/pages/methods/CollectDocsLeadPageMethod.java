@@ -173,6 +173,21 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    	sel.selectByVisibleText(soleowner);
 		    }
 		    
+            public void CustomerRelationship(String Relationship)
+		    
+		    {
+		    	Select sel=new Select(CollectDocsLeadPageObject.sel_ldrelationshiptype);
+		    	//sel.selectByValue(Product);
+		    	sel.selectByVisibleText(Relationship);
+		    }
+            public void OnlyBBNRequired(String Relationship)
+		    
+		    {
+		    	Select sel=new Select(CollectDocsLeadPageObject.sel_ldOnlyBBNrequired);
+		    	//sel.selectByValue(Product);
+		    	sel.selectByVisibleText(Relationship);
+		    }
+		    
 		    public void Employeetype(String empytype)
 		    {
 		    	Select sel=new Select(CollectDocsLeadPageObject.sel_ldEmployeType);
@@ -442,6 +457,18 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    	
 		    }
 		    
+		    public void clickaddScndryLeadButton()
+			
+			
+		    {   
+				/*
+				 * JavascriptExecutor js = (JavascriptExecutor) driver;
+				 * js.executeScript("window.scrollBy(0,250)", "");
+				 *///driver.switchTo( ).alert( ).dismiss();
+		    	CollectDocsLeadPageObject.clk_addScndryLeadButton.click();
+		    	
+		    }
+		    
 		    
               public void clickClosePopup()
 			
@@ -464,6 +491,104 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
   		
 		    	
 		    }
+              
+              //// Non individual fields
+              public void CustomerCategory(String CustomerType)
+  		    {
+  		    	Select sel=new Select(CollectDocsLeadPageObject.sel_ldcustomerCategory);
+  		    	//sel.selectByValue(Product);
+  		    	sel.selectByVisibleText(CustomerType);
+  		    }
+              public void businessExpiry(String businessExpiry)
+  			
+  			
+  		    {   
+  				
+  		    	CollectDocsLeadPageObject.clk_BusinessExpiry.sendKeys(businessExpiry);;
+  		    	
+  		    }
+              public void TypeOfCorp(String TypeOfCorp)
+    		    {
+    		    	Select sel=new Select(CollectDocsLeadPageObject.sel_ldTypeOfCorp);
+    		    	//sel.selectByValue(Product);
+    		    	sel.selectByVisibleText(TypeOfCorp);
+    		    }
+              
+              public void EntityType(String EntityType)
+  		    {
+  		    	Select sel=new Select(CollectDocsLeadPageObject.sel_ldEntityType);
+  		    	//sel.selectByValue(Product);
+  		    	sel.selectByVisibleText(EntityType);
+  		    }
+              public void CorporateDocumentPickerCLK() throws InterruptedException
+    			
+    			
+    		    {   
+            	  JavascriptExecutor js = (JavascriptExecutor) driver;
+          		js.executeScript("window.scrollBy(0,1700)", "");
+          		Thread.sleep(1000);
+    				
+    		    	CollectDocsLeadPageObject.sel_ldCorporateDocumentPickerCLK.click();;
+    		    	
+    		    }
+              
+              public void CorporateDocumentPickerCheck()
+    			
+    			
+    		    {   
+    				
+    		    	CollectDocsLeadPageObject.sel_ldCorporateDocumentPickerCheck.click();;
+    		    	
+    		    }
+              public void AddressTabNonindi()
+  		    {
+  		    	CollectDocsLeadPageObject.clk_ldAddressTabNonindi.click();
+  		
+  		    }
+              public void streetfiedNonIndi()
+  		    {
+  		    	Random r = new Random();
+  				 String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  				    final int N = 6;
+  				    StringBuilder sb = new StringBuilder();
+  				    for (int i = 0; i < N; i++) {
+  				        sb.append(alphabet.charAt(r.nextInt(alphabet.length())));
+  				    }
+  				    String lastname = sb.toString();
+  				    CollectDocsLeadPageObject.ent_ldStreetNonIndi.sendKeys(lastname);
+
+  		    }
+              
+              public void ZipcodeNonIndi(String Zipcode) throws InterruptedException
+  		    {
+  		    	WebElement zip = CollectDocsLeadPageObject.pic_ldZipCodeNonIndi;
+  				zip.sendKeys(Zipcode);
+  				Thread.sleep(1000);
+  				zip.sendKeys(Keys.DOWN);
+  				Thread.sleep(1000);
+  				zip.sendKeys(Keys.ENTER);
+  				
+  		    }
+              public void clickCRRSCButtonNonIndi()
+  			
+  			
+  		    {   
+  				/*
+  				 * JavascriptExecutor js = (JavascriptExecutor) driver;
+  				 * js.executeScript("window.scrollBy(0,250)", "");
+  				 *///driver.switchTo( ).alert( ).dismiss();
+  		    	CollectDocsLeadPageObject.clk_CRRSCBtnNonIndi.click();
+  		    	
+  		    }
+              public void PlantAddresssameasOfficeAddress(String padassameprad) throws InterruptedException
+  		    {
+  		    	Select sel1 = new Select(CollectDocsLeadPageObject.sel_ldperaddaspreaddNonIndi);
+  		    	sel1.selectByVisibleText(padassameprad);
+  				
+  				
+  		    }
+                
               
 		    
 }

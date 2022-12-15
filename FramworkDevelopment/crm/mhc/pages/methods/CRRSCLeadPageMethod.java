@@ -101,8 +101,10 @@ public class CRRSCLeadPageMethod  extends HomePageMethod{
     {
     	WebElement Industry_Classification = CRRSCLeadPageObject.sel_IndustryCRRSC;
 		Industry_Classification.sendKeys(IndustryCRRSC);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		Industry_Classification.sendKeys(Keys.DOWN);
+		Thread.sleep(500);
+
 		Industry_Classification.sendKeys(Keys.ENTER);
     }
     	
@@ -138,10 +140,25 @@ public class CRRSCLeadPageMethod  extends HomePageMethod{
     {
     	WebElement CityCRRSC1 = CRRSCLeadPageObject.sel_CityCRRSC;
     	CityCRRSC1.sendKeys(CityCRRSC);
-    	Thread.sleep(2000);
+    	Thread.sleep(1000);
     	CityCRRSC1.sendKeys(Keys.DOWN);
+		Thread.sleep(500);
+
 		CityCRRSC1.sendKeys(Keys.ENTER);
-		Thread.sleep(1000);
+		Thread.sleep(500);
+				
+		
+    }
+	public void CityCRRSCNonIndi(String CityCRRSC) throws InterruptedException
+    {
+    	WebElement CityCRRSC1 = CRRSCLeadPageObject.sel_CityCRRSCNonIndi;
+    	CityCRRSC1.sendKeys(CityCRRSC);
+    	Thread.sleep(1000);
+    	CityCRRSC1.sendKeys(Keys.DOWN);
+		Thread.sleep(500);
+
+		CityCRRSC1.sendKeys(Keys.ENTER);
+		Thread.sleep(500);
 				
 		
     }

@@ -23,6 +23,9 @@ public static WebElement clk_salesonbaordingjourneynext2;
 @FindBy(css="input[name='100000012']")
 public static WebElement ent_fillBBNnumber;
 
+@FindBy(css="input[name='100000007']")
+public static WebElement ent_fillBBNnumberNonIndi;
+
 
 /*
  * //gold5.5
@@ -35,6 +38,8 @@ public static WebElement ent_fillBBNnumber;
 @FindBy(xpath="//a[@data-autoid='F266_0']")
 public static WebElement clk_topBBN;
 
+@FindBy(xpath="//a[@data-autoid='F360_0']")
+public static WebElement clk_topBBNNonIndi;
 
 @FindBy(xpath="//*[@id=\\\"newobject\\\"]/div[3]/div/div")
 public static WebElement btn_redbutton;

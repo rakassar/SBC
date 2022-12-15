@@ -1,10 +1,15 @@
 package crm.mhc.pages.methods;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 
 import crm.mhc.pages.objects.CRRSCLeadPageObject;
 import crm.mhc.pages.objects.CaseStagePageObject;
 import crm.mhc.pages.objects.CollectDocsLeadPageObject;
+import crm.mhc.pages.objects.CustomerSearchPageObject;
 import crm.mhc.pages.objects.HomePageObject;
 import crm.mhc.pages.objects.LeadObjectPageObject;
 import crm.mhc.pages.objects.IndividualSalesJourneyPageObject;
@@ -67,8 +72,6 @@ public class LeadObjectPageMethod extends HomePageMethod{
 	{
 		
 	   LeadObjectPageObject.clk_selectthelead.click();
-		    Thread.sleep(1000);
-		    
 		    
 	}
   
@@ -132,6 +135,35 @@ public void ClickOnActivitiestab()
 	   LeadObjectPageObject.clk_BmApproveBttn.click();
 	   Thread.sleep(1000);
 	}
+   
+   
+   
+   public void SwitchToSecondaryWindow()
+
+   {	
+   	//String mainWindowHandle = driver.getWindowHandle();
+       //System.out.println("Main Window"+mainWindowHandle);
+       Set<String> multiplewindows=driver.getWindowHandles();
+       Iterator<String> iterator = multiplewindows.iterator();
+       String mainWindow = iterator.next();
+       System.out.println("Main Window"+mainWindow);
+       String ChildWindow = iterator.next();
+       System.out.println("Child Window"+ ChildWindow);
+       driver.switchTo().window(ChildWindow);      
+
+   }
+   
+   public void SwitchToParentWindow()
+
+   {	
+   	//String mainWindowHandle = driver.getWindowHandle();
+       //System.out.println("Main Window"+mainWindowHandle);
+       Set<String> multiplewindows=driver.getWindowHandles();
+       Iterator<String> iterator = multiplewindows.iterator();
+       String mainWindow = iterator.next();
+       driver.switchTo().window(mainWindow);      
+
+   }
    
    public void BmApproveComments(String BmComment) throws InterruptedException
    {
@@ -253,6 +285,13 @@ public String ExtractLeadid()
 {
 	leadid =LeadObjectPageObject.extra_Leadid.getText();
 	return leadid;
+}
+public void ClickOnOnBoardingJourneyNonIndi()
+
+{
+   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+	driver.findElements(By.id("1")).get(2).click(); 
+  // LeadObjectPageObject.clk_salesonbaordingjourney.get(2).click();;
 }
 
 }
