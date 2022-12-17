@@ -24,6 +24,9 @@ public static WebElement clk_statuscodedocs;
 @FindBy(name="LE_EMAIL")
 public static WebElement ent_ldemail;
 
+@FindBy(name="cust_175")
+public static WebElement pic_ldSalesid;
+
 
 @FindBy(xpath="(//select[@class='selectbox selectbox--ba'])[1]")
 public static WebElement sel_dobmm;
@@ -151,11 +154,32 @@ public static WebElement sel_Ofac;
 @FindBy(xpath="//span[normalize-space()='Perform CRRSC']") 
 public static WebElement clk_CRRSCBtn;
 
+@FindBy(xpath="//span[normalize-space()='Individual Customer/Account Creation']") 
+public static WebElement clk_IndiAccntCreateBtn;
+
 @FindBy(xpath="//span[normalize-space()='Add Secondary Lead']") 
 public static WebElement clk_addScndryLeadButton;
 
+@FindBy(name="cust_2038") 
+public static WebElement sel_settlementaccntType;
 
 
+@FindBy(name="cust_2739") 
+public static WebElement sel_ldUpdatedetailsTrustTreasury;
+
+@FindBy(xpath="//a[@data-autoid= 'cust_2047_srch']")
+public static WebElement pic_ldSelectSettleAccount;
+
+@FindBy(xpath="//div[@data-autoid='holdingnumber_0']")
+public static WebElement clk_ldSettleAccount;
+
+@FindBy(name="cust_1806") 
+public static WebElement clk_ldGroupID;
+
+@FindBy(name="cust_1540") 
+public static WebElement clk_ldDosriFlag;
+@FindBy(name="cust_1575") 
+public static WebElement clk_ldFatcaFlag;
 
 /*
  * @FindBy(xpath="//*[contains(@class,'icon icon icon-screenflow')]") public

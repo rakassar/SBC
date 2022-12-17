@@ -122,6 +122,11 @@ public class IndividualSalesJourneyPageMethod extends HomePageMethod {
 		// sel.selectByValue(Product);
 		sel.selectByVisibleText(ProductCategory);
 	}
+	public void pitchMultipleProduct(String pitchMultipleProduct) {
+		Select sel = new Select(IndividualSalesJourneyPageObject.sel_ldPitchMProduct);
+		// sel.selectByValue(Product);
+		sel.selectByVisibleText(pitchMultipleProduct);
+	}
 
 	public void Product(String Product) {
 		Select sel = new Select(IndividualSalesJourneyPageObject.sel_ldProduct);
@@ -326,6 +331,12 @@ public class IndividualSalesJourneyPageMethod extends HomePageMethod {
 		Thread.sleep(1000);
 		IndividualSalesJourneyPageObject.ser_SDTerritoryName.sendKeys(Keys.DOWN, Keys.ENTER);
 	}
+	
+	public void SDBranch(String Branch) throws InterruptedException {
+		IndividualSalesJourneyPageObject.ser_SDBranch.sendKeys(Branch);
+		Thread.sleep(1000);
+		IndividualSalesJourneyPageObject.ser_SDBranch.sendKeys(Keys.DOWN, Keys.ENTER);
+	}
 
 	public void SDLocation(String Location) throws InterruptedException {
 		IndividualSalesJourneyPageObject.ser_SDLocation.sendKeys(Location);
@@ -361,6 +372,104 @@ public class IndividualSalesJourneyPageMethod extends HomePageMethod {
 		// NTBIndividualSalesJourneyPageObject.picinser_Campaign.click();
 		IndividualSalesJourneyPageObject.picserselect_SDCampaign.click();
 	}
+	
+public void checkboxSaving() throws InterruptedException
+	
+  	{
+
+   
+	  IndividualSalesJourneyPageObject.chk_ldSaving.click();
+	  Thread.sleep(200);
+  	}
+public void checkboxChecking() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldChecking.click();
+  Thread.sleep(200);
+	}
+public void checkboxDeal() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldDeal.click();
+  Thread.sleep(200);
+	}
+public void checkboxPersonalLoan() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldPersonalLoan.click();
+  Thread.sleep(200);
+	}
+public void checkboxAutoloan() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldAutoLoan.click();
+  Thread.sleep(200);
+	}
+public void checkboxHomeLoan() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldHomeLoan.click();
+  Thread.sleep(200);
+	}
+public void checkboxCreditCard() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldCreditCard.click();
+  Thread.sleep(200);
+	}
+public void checkboxOtherloan() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldOtherLoan.click();
+  Thread.sleep(200);
+	}
+public void checkboxTrust() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldTrust.click();
+  Thread.sleep(200);
+	}
+public void checkboxUITF() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldUITF.click();
+  Thread.sleep(200);
+	}
+public void checkBoxBanca() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldBanca.click();
+  Thread.sleep(200);
+	}
+public void checkboxTreasury() throws InterruptedException
+
+	{
+
+
+  IndividualSalesJourneyPageObject.chk_ldTreasury.click();
+  Thread.sleep(200);
+	}
+	
 
 	public void SDAdvanceSearchByMobile() throws InterruptedException {
 		HomePageObject.btn_AdvancesearchedByMobilePhone.sendKeys(SDmobilenumber);
