@@ -27,8 +27,18 @@ public static WebElement ent_ldfirstname;
 public static WebElement ent_ldlastname;
 @FindBy(name="MIDDLENAME")
 public static WebElement ent_ldmiddlename;
+
+
+@FindBy(name="LE_TERRITORY")
+public static WebElement ent_ldBranch;
+
+
+@FindBy(name="cust_1134")
+public static WebElement sel_ldPitchMProduct;
+
 @FindBy(name="LE_MOBILE")
 public static WebElement ent_ldmobile;
+
 @FindBy(xpath="//*[@id=\"object-action-button\"]/div/a")
 public static WebElement clk_NTBONBourneynext1;
 @FindBy(id="LEA_EX3_41month")
@@ -90,6 +100,8 @@ public static WebElement ent_SDFax;
 public static WebElement ent_SDPhone;
 @FindBy(id="Lea_ex1_7")
 public static WebElement ent_SDEmployer;
+@FindBy(name="LE_TERRITORY")
+public static WebElement ser_SDBranch ;
 @FindBy(id="OfficePhone")
 public static WebElement ent_SDOfficePhone;
 @FindBy(id="Lea_ex2_13")
@@ -263,6 +275,31 @@ public static WebElement picserselect_COLCampaign ;
 
 
 //***********End*************Fill the Info for COL process*****************************-------------//
+//checkbox for pitches
+@FindBy(xpath="//label[@for = 'chk_4']")
+public static WebElement chk_ldSaving;
+@FindBy(xpath="//label[@for = 'chk_5']")
+public static WebElement chk_ldChecking;
+@FindBy(xpath="//label[@for = 'chk_6']")
+public static WebElement chk_ldDeal;
+@FindBy(xpath="//label[@for = 'chk_7']")
+public static WebElement chk_ldPersonalLoan;
+@FindBy(xpath="//label[@for = 'chk_8']")
+public static WebElement chk_ldAutoLoan;
+@FindBy(xpath="//label[@for = 'chk_9']")
+public static WebElement chk_ldHomeLoan;
+@FindBy(xpath="//label[@for = 'chk_10']")
+public static WebElement chk_ldCreditCard;
+@FindBy(xpath="//label[@for = 'chk_11']")
+public static WebElement chk_ldOtherLoan;
+@FindBy(xpath="//label[@for = 'chk_12']")
+public static WebElement chk_ldTrust;
+@FindBy(xpath="//label[@for = 'chk_13']")
+public static WebElement chk_ldUITF;
+@FindBy(xpath="//label[@for = 'chk_14']")
+public static WebElement chk_ldBanca;
+@FindBy(xpath="//label[@for = 'chk_15']")
+public static WebElement chk_ldTreasury;
 
 
 

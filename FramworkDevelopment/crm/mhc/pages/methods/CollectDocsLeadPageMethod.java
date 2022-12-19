@@ -148,6 +148,29 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    	//sel.selectByValue(Product);
 		    	sel.selectByVisibleText(cvlsts);
 		    }
+		    public void settlementaccntType(String accounttype)
+		    {
+		    	Select sel=new Select(CollectDocsLeadPageObject.sel_settlementaccntType);
+		    	//sel.selectByValue(Product);
+		    	sel.selectByVisibleText(accounttype);
+		    }
+		    
+		    public void UpdateDetailsTrustTreasury(String Updatedetails)
+		    {
+		    	Select sel=new Select(CollectDocsLeadPageObject.sel_ldUpdatedetailsTrustTreasury);
+		    	//sel.selectByValue(Product);
+		    	sel.selectByVisibleText(Updatedetails);
+		    }
+		    public void settlementaccntPickerclk()
+		    {
+		   CollectDocsLeadPageObject.pic_ldSelectSettleAccount.click();
+		   
+		    }
+		    public void settlementaccntclk()
+		    {
+		   CollectDocsLeadPageObject.clk_ldSettleAccount.click();
+		   
+		    }
 		    
 		    public void BusinnesSegment(String BussSegment)
 		    {
@@ -164,6 +187,15 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 				clients.sendKeys(Keys.ENTER);
 		    
 		    }
+		    public void salesID(String salesID) throws InterruptedException
+		    {
+		    	WebElement clients= CollectDocsLeadPageObject.pic_ldSalesid;
+		    	clients.sendKeys(salesID);
+				Thread.sleep(1000);
+				clients.sendKeys(Keys.ARROW_DOWN);
+				Thread.sleep(500);
+				clients.sendKeys(Keys.ENTER);
+				}
 		    
 		    public void SoleOwner(String soleowner)
 		    
@@ -235,6 +267,11 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    	Nature_work .sendKeys(Keys.ENTER);
 		    	Thread.sleep(1000);
 		    }
+		    public void GroupID(String groupid) throws InterruptedException
+		    {
+		    	
+		    	CollectDocsLeadPageObject.clk_ldGroupID.sendKeys(groupid);
+		    	}
 		    
 		    public void NatureOfWorkNEW(String NTWORK) throws InterruptedException
 		    {
@@ -249,6 +286,18 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    	Thread.sleep(1000);
 		    }
 		    
+		    public void dosriFlag (String flag)
+		    {
+		    	Select sel = new Select(CollectDocsLeadPageObject.clk_ldDosriFlag);
+		    	sel.selectByVisibleText(flag);
+		
+		    }
+		    public void fatcaFlag (String flag)
+		    {
+		    	Select sel = new Select(CollectDocsLeadPageObject.clk_ldFatcaFlag);
+		    	sel.selectByVisibleText(flag);
+		
+		    }
 		    public void occupation (String Occupation)
 		    {
 		    	Select sel = new Select(CollectDocsLeadPageObject.sel_ldOccupation);
@@ -271,6 +320,7 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 		    	sel2.selectByVisibleText(year);
 		
 		    }
+		    
 	     
 
 		    public void Sourceoffunds (String source)
@@ -454,6 +504,14 @@ public class CollectDocsLeadPageMethod extends HomePageMethod{
 				 * js.executeScript("window.scrollBy(0,250)", "");
 				 *///driver.switchTo( ).alert( ).dismiss();
 		    	CollectDocsLeadPageObject.clk_CRRSCBtn.click();
+		    	
+		    }
+            public void clickIndiAccntCreateBtn()
+			
+			
+		    {   
+				
+		    	CollectDocsLeadPageObject.clk_IndiAccntCreateBtn.click();
 		    	
 		    }
 		    
